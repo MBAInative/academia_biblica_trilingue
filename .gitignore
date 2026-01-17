@@ -1,3 +1,6 @@
-node_modules
+_source/node_modules
 .env
 .DS_Store
+# Queremos trackear los archivos compilados en la raíz
+!index.html
+!assets/
