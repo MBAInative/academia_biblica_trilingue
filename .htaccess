@@ -1,8 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+
+  # 1. Si la petición es para un archivo existente, SÍRVELO directamente y TERMINA ([L])
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2. Protección extra: Si la URL empieza por /assets/, NO redirigir (asumir 404 si no existe)
+  RewriteRule ^assets/ - [L]
+
+  # 3. Para todo lo demás (rutas de la App), enviar a index.html
+  RewriteRule ^ index.html [L]
 </IfModule>
