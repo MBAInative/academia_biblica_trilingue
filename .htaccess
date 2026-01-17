@@ -1,8 +1,18 @@
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^$ dist/index.html [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . dist/index.html [L]
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Redirigir la raíz a dist/index.html
+    RewriteRule ^$ dist/index.html [L]
+
+    # 2. Si el archivo solicitado existe dentro de /dist, sírvelo desde allí
+    # Esto arregla la carga de /assets/index.js, /vite.svg, etc.
+    RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI} -f
+    RewriteRule ^(.*)$ dist/$1 [L]
+
+    # 3. Para cualquier otra ruta que no sea un archivo real (rutas de la App como /about),
+    # servir dist/index.html para que React maneje la navegación.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ dist/index.html [L]
 </IfModule>
