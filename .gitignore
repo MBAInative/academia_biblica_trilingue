@@ -1,6 +1,5 @@
-_source/node_modules
+node_modules
 .env
 .DS_Store
-# Queremos trackear los archivos compilados en la raíz
-!index.html
-!assets/
+# Permitimos dist para despliegue simple
+!dist

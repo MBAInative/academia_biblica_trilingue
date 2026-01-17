@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Si la petición es para la raíz, sirve dist/index.html
+    RewriteRule ^$ dist/index.html [L]
+
+    # Si el archivo existe en dist, sírvelo desde allí
+    RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f
+    RewriteRule ^(.*)$ dist/$1 [L]
+
+    # Si no es un archivo real, sirve dist/index.html (para rutas de React)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ dist/index.html [L]
+</IfModule>
