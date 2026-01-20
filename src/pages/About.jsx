@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
 import InmaImage from '../assets/Inma.png';
@@ -103,6 +104,18 @@ const About = () => {
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Además de mi labor docente, soy <strong>conferencista</strong> y <strong>colaboradora</strong> de la revista <strong>Tierra Santa</strong>, así como comunicadora en <strong>Radio María</strong>, espacios donde comparto mi pasión por la Biblia y la cultura del mundo antiguo.
                   </p>
+                  
+                  <div className="pt-4 border-t border-stone-200">
+                    <p className="text-lg text-stone-600 leading-relaxed italic mb-2">
+                      "Durante años he realizado dibujos para la revista Vida Nueva. La caligrafía y el dibujo forman parte de mis aficiones más queridas."
+                    </p>
+                    <Link 
+                      to="/inma-dibujos" 
+                      className="inline-flex items-center text-amber-700 hover:text-amber-800 font-medium transition-colors border-b-2 border-amber-200 hover:border-amber-700"
+                    >
+                      Inma y sus dibujos →
+                    </Link>
+                  </div>
                 </motion.div>
               </div>
 

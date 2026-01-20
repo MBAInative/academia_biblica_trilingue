@@ -1,9 +1,98 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Globe, Mail, Phone } from 'lucide-react';
+import { Calendar, Clock, Globe, Mail, Phone, Book, Heart, Utensils, Church, Languages, Sparkles } from 'lucide-react';
+
+import ConfImg1 from '@/assets/conferencias/Imagen.1.jpeg';
+import ConfImg2 from '@/assets/conferencias/Imagen.2.jpeg';
+import ConfImg3 from '@/assets/conferencias/Imagen.3.jpeg';
+import ConfImg4 from '@/assets/conferencias/Imagen.4.jpeg';
+import ConfImg5 from '@/assets/conferencias/Imagen.5.jpeg';
+import ConfImg6 from '@/assets/conferencias/Imagen.6.jpeg';
 
 const Courses = () => {
+  const trainingProposal = [
+    {
+      title: "A. Para conocer",
+      icon: Book,
+      color: "bg-blue-100 text-blue-900",
+      items: [
+        "Introducción general: Qué es y qué no es la Biblia",
+        "Historia del pueblo bíblico y Geografía del país de la Biblia",
+        "Últimos descubrimientos arqueológicos y Restauraciones en Tierra Santa",
+        "Vida y costumbres del pueblo de la Biblia",
+        "Judaísmo: desde Jesús a nuestros días",
+        "La formación de la Biblia: redacción y transmisión",
+        "Claves para aprender a leer un texto bíblico",
+        "Los géneros literarios en la Biblia y Didáctica de los textos bíblicos",
+        "El AT: una experiencia sorprendente (Visión panorámica, Creación, Patriarcas, Mujeres, Profetas, Sabiduría)",
+        "El NT: Jesús y el Reino que llega (Jesús histórico, Judaísmo, Parábolas, Oración, Mujeres)",
+        "San Pablo: su persona, sus cartas y su relación con las mujeres",
+        "María, la mejor discípula"
+      ]
+    },
+    {
+      title: "B. Para profundizar",
+      icon: Heart,
+      color: "bg-rose-100 text-rose-900",
+      items: [
+        "Costumbres y tradiciones judías y sus textos",
+        "Biblia y ecología",
+        "La fe y la Biblia",
+        "La entrañable misericordia de nuestro Dios",
+        "Los Proverbios bíblicos y María en la tradición sapiencial",
+        "La hospitalidad: una actitud bíblica",
+        "Un Dios comunitario: La Trinidad en la Biblia",
+        "La justicia: una virtud típicamente bíblica",
+        "El peregrinaje en la Biblia",
+        "El símbolo de la barca"
+      ]
+    },
+    {
+      title: "C. Para saborear",
+      icon: Utensils,
+      color: "bg-amber-100 text-amber-900",
+      items: [
+        "La Biblia en el arte y un paseo por el Museo del Prado",
+        "Un Dios que es Padre y Madre",
+        "El Nombre y los nombres de Dios",
+        "Mujeres bíblicas: heroínas rescatadas del silencio",
+        "\"Si me olvido de ti, Jerusalén...\": un viaje histórico-arqueológico por la Tierra de Jesús",
+        "Taller de cocina bíblica para niños",
+        "La Biblia en nuestra cultura (Cine, TV, Publicidad)"
+      ]
+    },
+    {
+      title: "D. Para orar",
+      icon: Sparkles,
+      color: "bg-purple-100 text-purple-900",
+      items: [
+        "La lectio divina: orar la Palabra, gustar la vida",
+        "Retiros bíblicos para tiempos fuertes"
+      ]
+    },
+    {
+      title: "E. Para celebrar",
+      icon: Church,
+      color: "bg-emerald-100 text-emerald-900",
+      items: [
+        "La eucaristía y el séder de pesaj",
+        "Entronización de la Palabra",
+        "Pregón de Adviento"
+      ]
+    },
+    {
+      title: "F. Para aprender",
+      icon: Languages,
+      color: "bg-stone-100 text-stone-900",
+      items: [
+        "Hebreo bíblico",
+        "Griego bíblico",
+        "Latín de la Vulgata"
+      ]
+    }
+  ];
+
   const hebrewCourses = [
     { level: 'HEBREO I', day: 'Jueves', time: '18h-19.30h' },
     { level: 'HEBREO II', day: 'Miércoles', time: '18.30h-20h' },
@@ -197,6 +286,65 @@ const Courses = () => {
                   Personas sin/con conocimientos previos interesadas en el Hebreo y el Griego de la Biblia
                 </p>
               </motion.div>
+
+              {/* Nueva sección: Propuesta Formativa */}
+              <section className="py-20 mt-10 border-t border-stone-200">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="text-center mb-16"
+                >
+                  <h2 className="text-4xl font-serif font-bold text-stone-800 mb-4">
+                    Propuesta Formativa
+                  </h2>
+                  <h3 className="text-2xl font-serif italic text-amber-800">
+                    La Biblia: Un viaje apasionante a los orígenes de nuestra fe
+                  </h3>
+                </motion.div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-center">
+                  <div className="grid grid-cols-2 gap-4">
+                    <img src={ConfImg1} alt="Conferencia 1" className="rounded-xl shadow-md w-full h-48 object-cover" />
+                    <img src={ConfImg2} alt="Conferencia 2" className="rounded-xl shadow-md w-full h-48 object-cover" />
+                    <img src={ConfImg3} alt="Conferencia 3" className="rounded-xl shadow-md w-full h-48 object-cover" />
+                    <img src={ConfImg4} alt="Conferencia 4" className="rounded-xl shadow-md w-full h-48 object-cover" />
+                  </div>
+                  <div>
+                    <img src={ConfImg5} alt="Conferencia 5" className="rounded-xl shadow-lg w-full h-auto mb-4" />
+                    <img src={ConfImg6} alt="Conferencia 6" className="rounded-xl shadow-md w-full h-32 object-cover" />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {trainingProposal.map((section, idx) => (
+                    <motion.div
+                      key={section.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: idx * 0.1 }}
+                      className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm hover:shadow-md transition-shadow"
+                    >
+                      <div className="flex items-center mb-6">
+                        <div className={`p-3 rounded-xl ${section.color} mr-4`}>
+                          <section.icon size={24} />
+                        </div>
+                        <h4 className="text-xl font-bold text-stone-800">{section.title}</h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {section.items.map((item, i) => (
+                          <li key={i} className="flex items-start text-stone-600 text-sm leading-relaxed">
+                            <span className="text-amber-600 mr-2 font-bold">•</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
         </section>
