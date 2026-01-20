@@ -56,20 +56,11 @@ const About = () => {
 
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-8 mb-16">
                 <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <img className="w-full h-auto rounded-2xl shadow-lg" alt="Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe" src={InmaImage} />
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                   className="space-y-6"
@@ -80,6 +71,29 @@ const About = () => {
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Soy <strong>Dra. en Filología Bíblica Trilingüe</strong> y <strong>Teóloga</strong>, especializada en el estudio profundo de las lenguas originales de la Biblia: hebreo, griego y arameo.
                   </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="py-4"
+                >
+                  <img 
+                    className="w-full h-auto rounded-2xl shadow-xl" 
+                    alt="Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe" 
+                    src={InmaImage} 
+                  />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="space-y-6"
+                >
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Mi vocación es acercar el mundo bíblico a través de sus lenguas originales, permitiendo una comprensión más auténtica y profunda de los textos sagrados.
                   </p>
