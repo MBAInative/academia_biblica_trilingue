@@ -15,6 +15,7 @@ const Courses = () => {
     {
       title: "A. Para conocer",
       icon: Book,
+      image: ConfImg1,
       color: "bg-blue-100 text-blue-900",
       items: [
         "Introducción general: Qué es y qué no es la Biblia",
@@ -34,6 +35,7 @@ const Courses = () => {
     {
       title: "B. Para profundizar",
       icon: Heart,
+      image: ConfImg2,
       color: "bg-rose-100 text-rose-900",
       items: [
         "Costumbres y tradiciones judías y sus textos",
@@ -51,6 +53,7 @@ const Courses = () => {
     {
       title: "C. Para saborear",
       icon: Utensils,
+      image: ConfImg3,
       color: "bg-amber-100 text-amber-900",
       items: [
         "La Biblia en el arte y un paseo por el Museo del Prado",
@@ -65,6 +68,7 @@ const Courses = () => {
     {
       title: "D. Para orar",
       icon: Sparkles,
+      image: ConfImg4,
       color: "bg-purple-100 text-purple-900",
       items: [
         "La lectio divina: orar la Palabra, gustar la vida",
@@ -74,6 +78,7 @@ const Courses = () => {
     {
       title: "E. Para celebrar",
       icon: Church,
+      image: ConfImg5,
       color: "bg-emerald-100 text-emerald-900",
       items: [
         "La eucaristía y el séder de pesaj",
@@ -84,6 +89,7 @@ const Courses = () => {
     {
       title: "F. Para aprender",
       icon: Languages,
+      image: ConfImg6,
       color: "bg-stone-100 text-stone-900",
       items: [
         "Hebreo bíblico",
@@ -304,19 +310,6 @@ const Courses = () => {
                   </h3>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20 items-center">
-                  <div className="grid grid-cols-2 gap-4">
-                    <img src={ConfImg1} alt="Conferencia 1" className="rounded-xl shadow-md w-full h-48 object-cover" />
-                    <img src={ConfImg2} alt="Conferencia 2" className="rounded-xl shadow-md w-full h-48 object-cover" />
-                    <img src={ConfImg3} alt="Conferencia 3" className="rounded-xl shadow-md w-full h-48 object-cover" />
-                    <img src={ConfImg4} alt="Conferencia 4" className="rounded-xl shadow-md w-full h-48 object-cover" />
-                  </div>
-                  <div>
-                    <img src={ConfImg5} alt="Conferencia 5" className="rounded-xl shadow-lg w-full h-auto mb-4" />
-                    <img src={ConfImg6} alt="Conferencia 6" className="rounded-xl shadow-md w-full h-32 object-cover" />
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {trainingProposal.map((section, idx) => (
                     <motion.div
@@ -325,22 +318,33 @@ const Courses = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
-                      className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm hover:shadow-md transition-shadow"
+                      className="bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden"
                     >
-                      <div className="flex items-center mb-6">
-                        <div className={`p-3 rounded-xl ${section.color} mr-4`}>
-                          <section.icon size={24} />
-                        </div>
-                        <h4 className="text-xl font-bold text-stone-800">{section.title}</h4>
+                      {/* Imagen de cabecera */}
+                      <div className="h-48 w-full overflow-hidden">
+                        <img 
+                          src={section.image} 
+                          alt={section.title} 
+                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        />
                       </div>
-                      <ul className="space-y-3">
-                        {section.items.map((item, i) => (
-                          <li key={i} className="flex items-start text-stone-600 text-sm leading-relaxed">
-                            <span className="text-amber-600 mr-2 font-bold">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      
+                      <div className="p-8">
+                        <div className="flex items-center mb-6">
+                          <div className={`p-3 rounded-xl ${section.color} mr-4`}>
+                            <section.icon size={24} />
+                          </div>
+                          <h4 className="text-xl font-bold text-stone-800">{section.title}</h4>
+                        </div>
+                        <ul className="space-y-3">
+                          {section.items.map((item, i) => (
+                            <li key={i} className="flex items-start text-stone-600 text-sm leading-relaxed">
+                              <span className="text-amber-600 mr-2 font-bold">•</span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </motion.div>
                   ))}
                 </div>
