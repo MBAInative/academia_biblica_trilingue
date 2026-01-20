@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
+import InmaImage from '../assets/Inma.png';
 
 const About = () => {
   const achievements = [
@@ -63,7 +64,7 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <img class="w-full h-[500px] object-cover rounded-2xl shadow-lg" alt="Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe" src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/478a735ecf06e2dc659be4f4c9bb57ea.jpg" />
+                  <img className="w-full h-[500px] object-cover rounded-2xl shadow-lg" alt="Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe" src={InmaImage} />
                 </motion.div>
 
                 <motion.div
