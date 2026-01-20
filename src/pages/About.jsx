@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
 import InmaImage from '../assets/Inma.png';
+import Inma01 from '../assets/Inma.01.png';
+import Inma02 from '../assets/Inma.02.png';
 
 const About = () => {
   const achievements = [
@@ -101,9 +103,18 @@ const About = () => {
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Como <strong>profesora universitaria</strong>, he dedicado años a la formación de estudiantes en el estudio riguroso del Antiguo y Nuevo Testamento, combinando el análisis filológico con el contexto histórico y cultural.
                   </p>
+                  
+                  <div className="py-2">
+                    <img src={Inma01} alt="Inma impartiendo clases" className="w-full h-auto rounded-xl shadow-md" />
+                  </div>
+
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Además de mi labor docente, soy <strong>conferencista</strong> y <strong>colaboradora</strong> de la revista <strong>Tierra Santa</strong>, así como comunicadora en <strong>Radio María</strong>, espacios donde comparto mi pasión por la Biblia y la cultura del mundo antiguo.
                   </p>
+                  
+                  <div className="py-2">
+                    <img src={Inma02} alt="Inma en conferencias" className="w-full h-auto rounded-xl shadow-md" />
+                  </div>
                   
                   <div className="pt-4 border-t border-stone-200">
                     <p className="text-lg text-stone-600 leading-relaxed italic mb-2">
