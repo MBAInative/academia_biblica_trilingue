@@ -1,40 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MessageSquare, Send } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/components/ui/use-toast';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const [state, handleSubmit] = useForm("mgooneny");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Construct the mailto link
-    const mailtoLink = `mailto:infohebreo@yahoo.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`)}`;
-    
-    // Open the default email client
-    window.location.href = mailtoLink;
-
-    toast({
-      title: "📨 Abriendo cliente de correo",
-      description: "Se abrirá tu aplicación de correo predeterminada para enviar el mensaje.",
-    });
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  if (state.succeeded) {
+    return (
+      <div className="pt-20 min-h-[80vh] flex items-center justify-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="max-w-md w-full mx-4 bg-white rounded-2xl p-8 shadow-xl text-center border border-stone-100"
+        >
+          <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="text-emerald-600" size={40} />
+          </div>
+          <h2 className="text-3xl font-serif font-bold text-stone-800 mb-4">¡Mensaje enviado!</h2>
+          <p className="text-stone-600 mb-8">
+            Gracias por contactar con la Academia Bíblica Trilingüe. He recibido tu mensaje y te responderé a la mayor brevedad posible.
+          </p>
+          <Button 
+            onClick={() => window.location.reload()}
+            className="bg-amber-900 hover:bg-amber-800 text-white px-8"
+          >
+            Enviar otro mensaje
+          </Button>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -138,11 +136,10 @@ const Contact = () => {
                           type="text"
                           id="name"
                           name="name"
-                          value={formData.name}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-900 focus:border-transparent transition-all"
                           required
                         />
+                        <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-xs mt-1" />
                       </div>
 
                       <div>
@@ -153,11 +150,10 @@ const Contact = () => {
                           type="email"
                           id="email"
                           name="email"
-                          value={formData.email}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-900 focus:border-transparent transition-all"
                           required
                         />
+                        <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-xs mt-1" />
                       </div>
 
                       <div>
@@ -168,11 +164,10 @@ const Contact = () => {
                           type="text"
                           id="subject"
                           name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
                           className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-900 focus:border-transparent transition-all"
                           required
                         />
+                        <ValidationError prefix="Subject" field="subject" errors={state.errors} className="text-red-500 text-xs mt-1" />
                       </div>
 
                       <div>
@@ -182,20 +177,20 @@ const Contact = () => {
                         <textarea
                           id="message"
                           name="message"
-                          value={formData.message}
-                          onChange={handleChange}
                           rows="5"
                           className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-amber-900 focus:border-transparent transition-all resize-none"
                           required
                         ></textarea>
+                        <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-xs mt-1" />
                       </div>
 
                       <Button
                         type="submit"
-                        className="w-full bg-amber-900 hover:bg-amber-800 text-white py-6 text-base font-medium"
+                        disabled={state.submitting}
+                        className="w-full bg-amber-900 hover:bg-amber-800 text-white py-6 text-base font-medium disabled:opacity-50"
                       >
                         <Send className="mr-2" size={20} />
-                        Enviar mensaje
+                        {state.submitting ? 'Enviando...' : 'Enviar mensaje'}
                       </Button>
                     </form>
                   </div>
