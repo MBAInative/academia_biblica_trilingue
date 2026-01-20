@@ -64,7 +64,7 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <img className="w-full h-[500px] object-cover rounded-2xl shadow-lg" alt="Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe" src={InmaImage} />
+                  <img className="w-full h-auto rounded-2xl shadow-lg" alt="Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe" src={InmaImage} />
                 </motion.div>
 
                 <motion.div
