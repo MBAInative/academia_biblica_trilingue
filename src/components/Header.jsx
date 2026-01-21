@@ -19,7 +19,7 @@ const Header = () => {
   const navLinks = [
     { path: '/', label: 'Inicio' },
     { path: '/acerca-de-mi', label: 'Acerca de mí' },
-    { path: '/academia', label: 'Academia de Lenguas Bíblicas' },
+    { path: '/academia', label: 'Hebreo y Griego' },
     { path: '/cursos', label: 'Cursos y Conferencias' },
     { path: '/podcast', label: 'Podcast' },
     { path: '/biblia-arte', label: 'Biblia y Arte' },

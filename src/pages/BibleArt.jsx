@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { motion } from 'framer-motion';
-import { Palette, BookOpen, Eye } from 'lucide-react';
-import { useToast } from '@/components/ui/use-toast';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Palette, X } from 'lucide-react';
 
 const BibleArt = () => {
-  const { toast } = useToast();
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  const handleComingSoon = () => {
-    toast({
-      title: "🚧 Esta función no está implementada todavía",
-      description: "¡No te preocupes! Puedes solicitarla en tu próximo mensaje! 🚀",
-    });
-  };
+  // Importar todas las imágenes de la carpeta assets/dibujos dinámicamente
+  const imagesGlob = import.meta.glob('../assets/dibujos/*.{jpg,jpeg,png,svg}', { eager: true });
+  
+  // Convertir el objeto de glob a un array de rutas
+  const images = Object.values(imagesGlob).map(img => img.default);
 
   return (
     <>
@@ -50,7 +49,7 @@ const BibleArt = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <img class="w-full h-[500px] object-cover rounded-2xl shadow-lg" alt="Biblical art and religious paintings" src="https://images.unsplash.com/photo-1566313099003-cf8d399b6535" />
+                  <img className="w-full h-[500px] object-cover rounded-2xl shadow-lg" alt="Biblical art and religious paintings" src="https://images.unsplash.com/photo-1566313099003-cf8d399b6535" />
                 </motion.div>
 
                 <motion.div
@@ -69,47 +68,6 @@ const BibleArt = () => {
                   <p className="text-lg text-stone-600 leading-relaxed">
                     En esta sección exploramos cómo los textos sagrados han sido interpretados visualmente, desde las obras maestras del Renacimiento hasta el arte contemporáneo.
                   </p>
-                  <p className="text-lg text-stone-600 leading-relaxed">
-                    Analizamos la simbología, el contexto cultural y teológico detrás de las representaciones artísticas de pasajes bíblicos.
-                  </p>
-                </motion.div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="bg-stone-50 rounded-xl p-8 text-center border border-stone-200"
-                >
-                  <Palette className="mx-auto text-amber-900 mb-4" size={48} />
-                  <h3 className="text-xl font-semibold text-stone-800 mb-2">Análisis Artístico</h3>
-                  <p className="text-stone-600">Interpretación de obras maestras inspiradas en la Biblia</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="bg-stone-50 rounded-xl p-8 text-center border border-stone-200"
-                >
-                  <BookOpen className="mx-auto text-amber-900 mb-4" size={48} />
-                  <h3 className="text-xl font-semibold text-stone-800 mb-2">Contexto Bíblico</h3>
-                  <p className="text-stone-600">Conexión entre el texto sagrado y su representación</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-stone-50 rounded-xl p-8 text-center border border-stone-200"
-                >
-                  <Eye className="mx-auto text-amber-900 mb-4" size={48} />
-                  <h3 className="text-xl font-semibold text-stone-800 mb-2">Simbología</h3>
-                  <p className="text-stone-600">Descubriendo los símbolos y significados ocultos</p>
                 </motion.div>
               </div>
 
@@ -118,24 +76,86 @@ const BibleArt = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-gradient-to-br from-amber-100 to-rose-100 rounded-2xl p-12 text-center"
+                className="bg-stone-50 rounded-2xl p-8 sm:p-12 text-center border border-stone-200"
               >
-                <h2 className="text-3xl font-serif font-bold text-stone-800 mb-4">
-                  Contenido en desarrollo
+                <Palette className="mx-auto text-amber-900 mb-6" size={48} />
+                <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">
+                  Inma y sus dibujos
                 </h2>
-                <p className="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
-                  Estamos preparando un contenido exclusivo sobre la relación entre la Biblia y el arte. Pronto podrás explorar análisis detallados de obras maestras y su conexión con los textos sagrados.
+                <p className="text-xl text-stone-600 italic mb-12 max-w-3xl mx-auto font-serif">
+                  "Durante años he realizado dibujos para la revista Vida Nueva. La caligrafía y el dibujo forman parte de mis aficiones más queridas."
                 </p>
-                <button
-                  onClick={handleComingSoon}
-                  className="inline-flex items-center justify-center px-8 py-4 bg-amber-900 text-white rounded-lg font-medium hover:bg-amber-800 transition-all hover:shadow-lg"
-                >
-                  Mantenerme informado
-                </button>
+                
+                {/* Galería de imágenes */}
+                <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 mb-12 text-left">
+                  {images.map((imgSrc, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="break-inside-avoid"
+                    >
+                      <div 
+                        className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
+                        onClick={() => setSelectedImage(imgSrc)}
+                      >
+                        <img 
+                          src={imgSrc} 
+                          alt={`Dibujo de Inma ${index + 1}`} 
+                          className="w-full h-auto rounded-lg transform transition-transform duration-500 group-hover:scale-[1.02]"
+                          loading="lazy"
+                          onContextMenu={(e) => e.preventDefault()}
+                          draggable="false"
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="border-t border-stone-200 pt-6 mt-6">
+                  <p className="text-sm text-stone-500 font-light">
+                    © Todos los derechos reservados a favor de Inmaculada Rodríguez Torné. Prohibida su reproducción total o parcial sin autorización.
+                  </p>
+                </div>
               </motion.div>
             </div>
           </div>
         </section>
+
+        {/* Lightbox Modal */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedImage(null)}
+              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out"
+            >
+              <button 
+                className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-50 p-2"
+                onClick={() => setSelectedImage(null)}
+              >
+                <X size={40} />
+              </button>
+              
+              <motion.img
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                src={selectedImage}
+                alt="Dibujo ampliado"
+                className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default"
+                onClick={(e) => e.stopPropagation()} // Evita cerrar si se hace clic en la imagen
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   );

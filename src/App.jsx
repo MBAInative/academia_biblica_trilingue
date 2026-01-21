@@ -9,7 +9,6 @@ import Academy from '@/pages/Academy';
 import Courses from '@/pages/Courses';
 import Podcast from '@/pages/Podcast';
 import BibleArt from '@/pages/BibleArt';
-import InmaDrawings from '@/pages/InmaDrawings';
 import Contact from '@/pages/Contact';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -31,7 +30,6 @@ function App() {
             <Route path="/cursos" element={<Courses />} />
             <Route path="/podcast" element={<Podcast />} />
             <Route path="/biblia-arte" element={<BibleArt />} />
-            <Route path="/inma-dibujos" element={<InmaDrawings />} />
             <Route path="/contacto" element={<Contact />} />
           </Routes>
         </main>
