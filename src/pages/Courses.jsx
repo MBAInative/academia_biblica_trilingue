@@ -279,10 +279,6 @@ const Courses = () => {
                     <Mail className="text-amber-900" size={24} />
                     <span className="text-stone-700">infohebreo@yahoo.com</span>
                   </a>
-                  <a href="mailto:academiabiblicatrilingue@gmail.com" className="flex items-center justify-center space-x-3 bg-white rounded-xl p-4 hover:shadow-lg transition-shadow">
-                    <Mail className="text-amber-900" size={24} />
-                    <span className="text-stone-700 text-sm">academiabiblicatrilingue@gmail.com</span>
-                  </a>
                   <a href="tel:+34649454564" className="flex items-center justify-center space-x-3 bg-white rounded-xl p-4 hover:shadow-lg transition-shadow md:col-span-2">
                     <Phone className="text-amber-900" size={24} />
                     <span className="text-stone-700">+34 649454564</span>

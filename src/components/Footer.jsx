@@ -41,10 +41,6 @@ const Footer = () => {
                 <Mail size={16} />
                 <span>infohebreo@yahoo.com</span>
               </a>
-              <a href="mailto:academiabiblicatrilingue@gmail.com" className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors text-sm">
-                <Mail size={16} />
-                <span>academiabiblicatrilingue@gmail.com</span>
-              </a>
               <a href="tel:+34649454564" className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors text-sm">
                 <Phone size={16} />
                 <span>+34 649454564</span>
