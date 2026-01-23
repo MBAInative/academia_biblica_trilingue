@@ -3,8 +3,11 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
-import InmaImage from '../assets/Inma.png';
+import InmaImage from '../assets/Inma.04.png';
 import Inma02 from '../assets/Inma.02.png';
+import Inma03 from '../assets/Inma.03.jpg';
+import MuroImage from '../assets/Muro.png';
+import LosaImage from '../assets/Losa.png';
 
 const About = () => {
   const achievements = [
@@ -99,16 +102,22 @@ const About = () => {
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Mi vocación es acercar el mundo bíblico a través de sus lenguas originales, permitiendo una comprensión más auténtica y profunda de los textos sagrados.
                   </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 py-4">
+                    <img src={MuroImage} alt="Muro" className="w-full sm:w-1/2 h-auto rounded-xl shadow-md" />
+                    <img src={LosaImage} alt="Losa" className="w-full sm:w-1/2 h-auto rounded-xl shadow-md" />
+                  </div>
+
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Como <strong>profesora universitaria</strong>, he dedicado años a la formación de estudiantes en el estudio riguroso del Antiguo y Nuevo Testamento, combinando el análisis filológico con el contexto histórico y cultural.
                   </p>
                   
                   <p className="text-lg text-stone-600 leading-relaxed mt-6">
-                    Además de mi labor docente, soy <strong>conferencista</strong> y <strong>colaboradora</strong> de la revista <strong>Tierra Santa</strong>, así como comunicadora en <strong>Radio María</strong>, espacios donde comparto mi pasión por la Biblia y la cultura del mundo antiguo.
+                    Además de mi labor docente, soy <strong>conferenciante</strong> y comunicadora en <strong>Radio María</strong>, espacios donde comparto mi pasión por la Biblia y la cultura del mundo antiguo.
                   </p>
                   
                   <div className="py-2">
-                    <img src={Inma02} alt="Inma en conferencias" className="w-full h-auto rounded-xl shadow-md" />
+                    <img src={Inma03} alt="Inma en conferencias" className="w-full h-auto rounded-xl shadow-md" />
                   </div>
                 </motion.div>
               </div>
