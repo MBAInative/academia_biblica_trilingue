@@ -27,8 +27,6 @@ const LegalNotice = () => {
                 </p>
                 <ul className="list-disc pl-5 space-y-2 mb-6">
                   <li><strong>Titular del sitio web:</strong> Inmaculada Rodríguez Torné (en adelante, "La Titular").</li>
-                  <li><strong>Domicilio:</strong> [INSERTAR DIRECCIÓN POSTAL]</li>
-                  <li><strong>N.I.F.:</strong> [INSERTAR DNI/CIF]</li>
                   <li><strong>Correo electrónico de contacto:</strong> infohebreo@yahoo.com</li>
                   <li><strong>Teléfono:</strong> +34 649 454 564</li>
                 </ul>
