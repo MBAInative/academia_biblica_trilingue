@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { PlayCircle, Music } from 'lucide-react';
+import rneLogo from '../assets/rne.png';
 
 const Interviews = () => {
   return (
@@ -55,7 +56,7 @@ const Interviews = () => {
                   </div>
                   <div className="w-32 flex-shrink-0">
                     <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_RNE_2008.svg" 
+                      src={rneLogo} 
                       alt="RNE Logo" 
                       className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" 
                     />
