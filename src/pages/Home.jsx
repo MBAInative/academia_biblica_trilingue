@@ -10,6 +10,9 @@ import MDoloresImg from '../assets/MDolores.png';
 import PortadaImg from '../assets/Portada.jpg';
 import CabeceraWeb from '../assets/CabeceraWeb.png';
 import InmaImage from '../assets/Inma.04.png';
+import GemmaImg from '../assets/Gemma.jpg';
+import MaikaImg from '../assets/Maika.jpg';
+import IsabelImg from '../assets/Isabel.png';
 
 const Home = () => {
   const features = [
@@ -53,20 +56,20 @@ const Home = () => {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="mb-8 max-w-3xl mx-auto"
-            >
-              <img 
-                src={CabeceraWeb} 
-                alt="Cabecera Academia Bíblica Trilingüe" 
-                className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/50"
-              />
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="mb-12 w-full"
+          >
+            <img 
+              src={CabeceraWeb} 
+              alt="Cabecera Academia Bíblica Trilingüe" 
+              className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/50"
+            />
+          </motion.div>
 
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,7 +93,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
             >
               <Link
                 to="/academia"
@@ -106,20 +109,20 @@ const Home = () => {
                 Inmaculada Rodríguez Torné
               </Link>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="mb-12 max-w-2xl mx-auto"
-            >
-              <img 
-                src={InmaImage} 
-                alt="Inmaculada Rodríguez Torné" 
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
-            </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="mb-12 w-full"
+          >
+            <img 
+              src={InmaImage} 
+              alt="Inmaculada Rodríguez Torné" 
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -192,16 +195,24 @@ const Home = () => {
       {/* Testimonios */}
       <section className="py-20 bg-stone-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-serif font-bold text-stone-800 mb-12 text-center"
+          >
+            Opiniones de nuestros alumnos
+          </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto grid grid-cols-1 gap-8"
+            className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
           >
             {/* Juan Antonio */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
                 <div className="w-24 h-24 flex-shrink-0">
                   <img 
                     src={JuanAntonioImg} 
@@ -209,21 +220,21 @@ const Home = () => {
                     className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
                   />
                 </div>
-                <div className="text-left">
-                  <Quote className="text-amber-900/20 mb-2" size={32} />
-                  <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
-                    "Soy Ingeniero Industrial jubilado. Aprendo Griego por ser un idioma clásico predecesor del nuestro y que me puede permitir leer el Nuevo Testamento en la lengua en que fue escrito."
-                  </p>
-                  <div className="font-serif font-bold text-amber-900 text-xl">
-                    Juan Antonio
-                  </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  Juan Antonio
                 </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "Soy Ingeniero Industrial jubilado. Aprendo Griego por ser un idioma clásico predecesor del nuestro y que me puede permitir leer el Nuevo Testamento en la lengua en que fue escrito."
+                </p>
               </div>
             </div>
 
             {/* Milagros */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
                 <div className="w-24 h-24 flex-shrink-0">
                   <img 
                     src={MilagrosImg} 
@@ -231,21 +242,21 @@ const Home = () => {
                     className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
                   />
                 </div>
-                <div className="text-left">
-                  <Quote className="text-amber-900/20 mb-2" size={32} />
-                  <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
-                    "He sido bibliotecaria; ahora estoy jubilada, y vivo entre Teruel y Madrid. Como creyente desde hace relativamente poco tiempo, me he puesto a estudiar Biblia. Al enterarme de que el Nuevo Testamento se escribió originalmente en griego koiné, no he podido resistirme a acercarme a los Evangelios aprendiendo un poco la lengua original. Me encanta el griego y la posibilidad de estudiarlo online, desde cualquier sitio."
-                  </p>
-                  <div className="font-serif font-bold text-amber-900 text-xl">
-                    Milagros
-                  </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  Milagros
                 </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "He sido bibliotecaria; ahora estoy jubilada, y vivo entre Teruel y Madrid. Como creyente desde hace relativamente poco tiempo, me he puesto a estudiar Biblia. Al enterarme de que el Nuevo Testamento se escribió originalmente en griego koiné, no he podido resistirme a acercarme a los Evangelios aprendiendo un poco la lengua original. Me encanta el griego y la posibilidad de estudiarlo online, desde cualquier sitio."
+                </p>
               </div>
             </div>
 
             {/* Catalina */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
                 <div className="w-24 h-24 flex-shrink-0">
                   <img 
                     src={CatalinaImg} 
@@ -253,21 +264,21 @@ const Home = () => {
                     className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
                   />
                 </div>
-                <div className="text-left">
-                  <Quote className="text-amber-900/20 mb-2" size={32} />
-                  <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
-                    "Los estudios de Hebreo me ayudan a conectarme más con mis raíces cristianas; me enriquecen en la fe y en la relación personal con Adonai."
-                  </p>
-                  <div className="font-serif font-bold text-amber-900 text-xl">
-                    Catalina
-                  </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  Catalina
                 </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "Los estudios de Hebreo me ayudan a conectarme más con mis raíces cristianas; me enriquecen en la fe y en la relación personal con Adonai."
+                </p>
               </div>
             </div>
 
             {/* M. Dolores */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
                 <div className="w-24 h-24 flex-shrink-0">
                   <img 
                     src={MDoloresImg} 
@@ -275,15 +286,81 @@ const Home = () => {
                     className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
                   />
                 </div>
-                <div className="text-left">
-                  <Quote className="text-amber-900/20 mb-2" size={32} />
-                  <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
-                    "Soy religiosa, docente en Primaria. Es mi tercer año en Hebreo. Estoy muy agradecida y contenta con las clases de nuestra profesora Inmaculada. Me están ayudando a comprender y profundizar en las palabras de la Biblia, a conocer mejor y gozar con el mensaje que nos transmite."
-                  </p>
-                  <div className="font-serif font-bold text-amber-900 text-xl">
-                    M. Dolores
-                  </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  M. Dolores
                 </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "Soy religiosa, docente en Primaria. Es mi tercer año en Hebreo. Estoy muy agradecida y contenta con las clases de nuestra profesora Inmaculada. Me están ayudando a comprender y profundizar en las palabras de la Biblia, a conocer mejor y gozar con el mensaje que nos transmite."
+                </p>
+              </div>
+            </div>
+
+            {/* Gemma */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
+                <div className="w-24 h-24 flex-shrink-0">
+                  <img 
+                    src={GemmaImg} 
+                    alt="Gemma" 
+                    className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                  />
+                </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  Gemma
+                </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "Médica ORL. Las clases me aportan un montón de cosas Y todas buenas: momentos de abstracción y concentración absoluta , reto personal diario, disciplina para estudiar todos los días un ratito , aprender cosas sobre una cultura diferente, ampliar conocimiento sobre la Biblia.... y haber conocido a un grupo de gente fantástica que lucha en cada clase con sus propias limitaciones de tiempo, edad, etc."
+                </p>
+              </div>
+            </div>
+
+            {/* Maika */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
+                <div className="w-24 h-24 flex-shrink-0">
+                  <img 
+                    src={MaikaImg} 
+                    alt="Maika" 
+                    className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                  />
+                </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  Maika
+                </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "Con el tiempo espero llegar a leer los libros del AT en el mismo idioma en el que fueron escritos y rezados. Me gusta pensar que Jesús escuchaba esas mismas palabras. Soy técnico superior en imagen para el diagnóstico."
+                </p>
+              </div>
+            </div>
+
+            {/* Isabel */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
+                <div className="w-24 h-24 flex-shrink-0">
+                  <img 
+                    src={IsabelImg} 
+                    alt="Isabel" 
+                    className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                  />
+                </div>
+                <div className="font-serif font-bold text-amber-900 text-xl">
+                  Isabel
+                </div>
+              </div>
+              <div className="flex-1">
+                <Quote className="text-amber-900/20 mb-2" size={32} />
+                <p className="text-stone-700 italic text-lg leading-relaxed">
+                  "Estoy jubilada y he sido funcionaria del Estado. Las clases de Hebreo Bíblico me sirven para conocer a Jesús de Nazaret."
+                </p>
               </div>
             </div>
           </motion.div>
