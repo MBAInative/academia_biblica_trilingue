@@ -144,14 +144,15 @@ const Courses = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
+              {/* Imagen sin horarios */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="mb-16"
+                className="mb-16 max-w-2xl mx-auto"
               >
-                <img src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/92f33436df5d59f5a2c5659d7402a2cf.jpg" alt="Cursos de Hebreo y Griego Bíblicos 2025-2026" className="w-full rounded-2xl shadow-lg" />
+                <img src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/43760bc2e3641e0c9001297e169904a8.jpg" alt="Información adicional sobre los cursos" className="w-full rounded-2xl shadow-lg" />
               </motion.div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -235,9 +236,9 @@ const Courses = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="mb-16"
+                className="mb-16 max-w-2xl mx-auto"
               >
-                <img src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/43760bc2e3641e0c9001297e169904a8.jpg" alt="Información adicional sobre los cursos" className="w-full rounded-2xl shadow-lg" />
+                <img src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/92f33436df5d59f5a2c5659d7402a2cf.jpg" alt="Cursos de Hebreo y Griego Bíblicos 2025-2026" className="w-full rounded-2xl shadow-lg" />
               </motion.div>
 
               <motion.div
@@ -279,8 +280,13 @@ const Courses = () => {
                     <Mail className="text-amber-900" size={24} />
                     <span className="text-stone-700">infohebreo@yahoo.com</span>
                   </a>
-                  <a href="tel:+34649454564" className="flex items-center justify-center space-x-3 bg-white rounded-xl p-4 hover:shadow-lg transition-shadow md:col-span-2">
-                    <Phone className="text-amber-900" size={24} />
+                  <a 
+                    href="https://wa.me/34649454564"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-3 bg-white rounded-xl p-4 hover:shadow-lg transition-shadow md:col-span-2"
+                  >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-10 h-10" />
                     <span className="text-stone-700">+34 649454564</span>
                   </a>
                 </div>

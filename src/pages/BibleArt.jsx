@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, X } from 'lucide-react';
+import ProvidenciaImage from '../assets/dibujos/Providencia quizas tarjeton.jpg';
 
 const BibleArt = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -32,9 +33,6 @@ const BibleArt = () => {
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Biblia y Arte
               </h1>
-              <p className="text-xl text-stone-600 font-light">
-                La expresión artística de la fe a través de los siglos
-              </p>
             </motion.div>
           </div>
         </section>
@@ -42,34 +40,19 @@ const BibleArt = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <img className="w-full h-[500px] object-cover rounded-2xl shadow-lg" alt="Biblical art and religious paintings" src="https://images.unsplash.com/photo-1566313099003-cf8d399b6535" />
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                  className="space-y-6"
-                >
-                  <h2 className="text-3xl font-serif font-bold text-stone-800">
-                    La Biblia inspirando al arte
-                  </h2>
-                  <p className="text-lg text-stone-600 leading-relaxed">
-                    A lo largo de la historia, la Biblia ha sido una fuente inagotable de inspiración para artistas de todas las épocas y estilos.
-                  </p>
-                  <p className="text-lg text-stone-600 leading-relaxed">
-                    En esta sección exploramos cómo los textos sagrados han sido interpretados visualmente, desde las obras maestras del Renacimiento hasta el arte contemporáneo.
-                  </p>
-                </motion.div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-16 max-w-2xl mx-auto"
+              >
+                <img 
+                  className="w-full h-auto object-cover rounded-2xl shadow-lg" 
+                  alt="Providencia" 
+                  src={ProvidenciaImage} 
+                />
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -80,7 +63,7 @@ const BibleArt = () => {
               >
                 <Palette className="mx-auto text-amber-900 mb-6" size={48} />
                 <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">
-                  Inma y sus dibujos
+                  Inma y sus dibujos bíblicos
                 </h2>
                 <p className="text-xl text-stone-600 italic mb-12 max-w-3xl mx-auto font-serif">
                   "Durante años he realizado dibujos para la revista Vida Nueva. La caligrafía y el dibujo forman parte de mis aficiones más queridas."

@@ -137,7 +137,7 @@ const Academy = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">
-                ¿Listo para comenzar?
+                ¿Quieres más información?
               </h2>
               <p className="text-lg text-stone-600 mb-8">
                 Descubre nuestros cursos disponibles y comienza tu viaje en las lenguas bíblicas

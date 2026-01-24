@@ -2,7 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { BookOpen, Users, Mic, Palette, ArrowRight } from 'lucide-react';
+import { BookOpen, Users, Mic, Palette, ArrowRight, Quote } from 'lucide-react';
+import JuanAntonioImg from '../assets/JuanAntonio.png';
+import MilagrosImg from '../assets/Milagros.png';
+import CatalinaImg from '../assets/Catalina.png';
+import MDoloresImg from '../assets/MDolores.png';
+import PortadaImg from '../assets/Portada.jpg';
 
 const Home = () => {
   const features = [
@@ -67,6 +72,19 @@ const Home = () => {
             </motion.p>
 
             <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="mb-12 max-w-2xl mx-auto"
+            >
+              <img 
+                src={PortadaImg} 
+                alt="Portada Academia Bíblica Trilingüe" 
+                className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/50"
+              />
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -83,8 +101,104 @@ const Home = () => {
                 to="/acerca-de-mi"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-amber-900 border-2 border-amber-900 rounded-lg font-medium hover:bg-amber-50 transition-all"
               >
-                Conocer más
+                Inmaculada Rodríguez Torné
               </Link>
+            </motion.div>
+
+            {/* Testimonios */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-20 max-w-4xl mx-auto grid grid-cols-1 gap-8"
+            >
+              {/* Juan Antonio */}
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-amber-100">
+                <div className="flex flex-col sm:flex-row items-center gap-6">
+                  <div className="w-24 h-24 flex-shrink-0">
+                    <img 
+                      src={JuanAntonioImg} 
+                      alt="Juan Antonio" 
+                      className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <Quote className="text-amber-900/20 mb-2" size={32} />
+                    <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
+                      "Soy Ingeniero Industrial jubilado. Aprendo Griego por ser un idioma clásico predecesor del nuestro y que me puede permitir leer el Nuevo Testamento en la lengua en que fue escrito."
+                    </p>
+                    <div className="font-serif font-bold text-amber-900 text-xl">
+                      Juan Antonio
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Milagros */}
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-amber-100">
+                <div className="flex flex-col sm:flex-row items-center gap-6">
+                  <div className="w-24 h-24 flex-shrink-0">
+                    <img 
+                      src={MilagrosImg} 
+                      alt="Milagros" 
+                      className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <Quote className="text-amber-900/20 mb-2" size={32} />
+                    <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
+                      "He sido bibliotecaria; ahora estoy jubilada, y vivo entre Teruel y Madrid. Como creyente desde hace relativamente poco tiempo, me he puesto a estudiar Biblia. Al enterarme de que el Nuevo Testamento se escribió originalmente en griego koiné, no he podido resistirme a acercarme a los Evangelios aprendiendo un poco la lengua original. Me encanta el griego y la posibilidad de estudiarlo online, desde cualquier sitio."
+                    </p>
+                    <div className="font-serif font-bold text-amber-900 text-xl">
+                      Milagros
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Catalina */}
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-amber-100">
+                <div className="flex flex-col sm:flex-row items-center gap-6">
+                  <div className="w-24 h-24 flex-shrink-0">
+                    <img 
+                      src={CatalinaImg} 
+                      alt="Catalina" 
+                      className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <Quote className="text-amber-900/20 mb-2" size={32} />
+                    <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
+                      "Los estudios de Hebreo me ayudan a conectarme más con mis raíces cristianas; me enriquecen en la fe y en la relación personal con Adonai."
+                    </p>
+                    <div className="font-serif font-bold text-amber-900 text-xl">
+                      Catalina
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* M. Dolores */}
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-amber-100">
+                <div className="flex flex-col sm:flex-row items-center gap-6">
+                  <div className="w-24 h-24 flex-shrink-0">
+                    <img 
+                      src={MDoloresImg} 
+                      alt="M. Dolores" 
+                      className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <Quote className="text-amber-900/20 mb-2" size={32} />
+                    <p className="text-stone-700 italic text-lg leading-relaxed mb-4">
+                      "Soy religiosa, docente en Primaria. Es mi tercer año en Hebreo. Estoy muy agradecida y contenta con las clases de nuestra profesora Inmaculada. Me están ayudando a comprender y profundizar en las palabras de la Biblia, a conocer mejor y gozar con el mensaje que nos transmite."
+                    </p>
+                    <div className="font-serif font-bold text-amber-900 text-xl">
+                      M. Dolores
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>

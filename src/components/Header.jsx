@@ -23,6 +23,7 @@ const Header = () => {
     { path: '/cursos', label: 'Cursos y Conferencias' },
     { path: '/podcast', label: 'Podcast' },
     { path: '/biblia-arte', label: 'Biblia y Arte' },
+    { path: '/entrevistas', label: 'Entrevistas' },
     { path: '/contacto', label: 'Contacto' }
   ];
 

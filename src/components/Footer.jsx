@@ -41,8 +41,13 @@ const Footer = () => {
                 <Mail size={16} />
                 <span>infohebreo@yahoo.com</span>
               </a>
-              <a href="tel:+34649454564" className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors text-sm">
-                <Phone size={16} />
+              <a 
+                href="https://wa.me/34649454564" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors text-sm"
+              >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-6 h-6" />
                 <span>+34 649454564</span>
               </a>
             </div>
