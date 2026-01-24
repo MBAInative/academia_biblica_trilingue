@@ -96,9 +96,20 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-stone-800 mb-2">Teléfono / WhatsApp</h3>
-                        <a href="tel:+34649454564" className="text-stone-600 hover:text-amber-900 transition-colors">
-                          +34 649 454 564
-                        </a>
+                        <div className="flex flex-col space-y-2">
+                          <a href="tel:+34649454564" className="text-stone-600 hover:text-amber-900 transition-colors">
+                            +34 649 454 564
+                          </a>
+                          <a 
+                            href="https://wa.me/34649454564" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors group"
+                          >
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                            <span className="text-sm font-medium">Contactar por WhatsApp</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
 
