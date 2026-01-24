@@ -3,7 +3,6 @@ node_modules
 .DS_Store
 # Permitimos dist para despliegue simple
 !dist
-# Ignorar audios pesados que exceden el límite de GitHub
+# Ignorar audios pesados de origen
 /fotos_y_dibujos/audios
-/public/audio
-/dist/audio
+# (Permitimos public/audio para los archivos optimizados que vayamos añadiendo)
