@@ -11,6 +11,10 @@ import Podcast from '@/pages/Podcast';
 import BibleArt from '@/pages/BibleArt';
 import Interviews from '@/pages/Interviews';
 import Contact from '@/pages/Contact';
+import LegalNotice from '@/pages/legal/LegalNotice';
+import PrivacyPolicy from '@/pages/legal/PrivacyPolicy';
+import CookiesPolicy from '@/pages/legal/CookiesPolicy';
+import TermsOfUse from '@/pages/legal/TermsOfUse';
 import { Toaster } from '@/components/ui/toaster';
 
 function App() {
@@ -33,6 +37,10 @@ function App() {
             <Route path="/biblia-arte" element={<BibleArt />} />
             <Route path="/entrevistas" element={<Interviews />} />
             <Route path="/contacto" element={<Contact />} />
+            <Route path="/aviso-legal" element={<LegalNotice />} />
+            <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
+            <Route path="/politica-cookies" element={<CookiesPolicy />} />
+            <Route path="/condiciones-uso" element={<TermsOfUse />} />
           </Routes>
         </main>
         <Footer />

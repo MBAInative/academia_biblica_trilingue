@@ -55,9 +55,18 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-stone-200 text-center">
-          <p className="text-stone-500 text-sm">
+          <p className="text-stone-500 text-sm mb-4">
             © {new Date().getFullYear()} Inmaculada Rodríguez Torné. Todos los derechos reservados.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-stone-400">
+            <Link to="/aviso-legal" className="hover:text-amber-900 transition-colors">Aviso Legal</Link>
+            <span>|</span>
+            <Link to="/politica-privacidad" className="hover:text-amber-900 transition-colors">Política de Privacidad</Link>
+            <span>|</span>
+            <Link to="/politica-cookies" className="hover:text-amber-900 transition-colors">Política de Cookies</Link>
+            <span>|</span>
+            <Link to="/condiciones-uso" className="hover:text-amber-900 transition-colors">Condiciones de Uso</Link>
+          </div>
         </div>
       </div>
     </footer>
