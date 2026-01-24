@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import RolloImage from '../assets/Rollo.jpg';
 
 const Academy = () => {
   const features = [
@@ -85,7 +86,7 @@ const Academy = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <img class="w-full h-[400px] object-cover rounded-2xl shadow-lg" alt="Ancient Hebrew and Greek biblical manuscripts" src="https://images.unsplash.com/photo-1612375412161-41d76d95f15c" />
+                  <img class="w-full h-[400px] object-cover rounded-2xl shadow-lg" alt="Ancient Hebrew and Greek biblical manuscripts" src={RolloImage} />
                 </motion.div>
               </div>
 

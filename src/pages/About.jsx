@@ -76,7 +76,7 @@ const About = () => {
                     Inmaculada Rodríguez Torné
                   </h2>
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Soy <strong>Dra. en Filología Bíblica Trilingüe</strong> y <strong>Teóloga</strong>, especializada en el estudio profundo de las lenguas originales de la Biblia: hebreo, griego y arameo.
+                    Soy Inmaculada Rodríguez Torné, y quizás a alguno le suene mi nombre o mi voz porque colaboro en Radio María. Soy biblista, licenciada en Filología Clásica, doctora en Filología Bíblica Trilingüe y teóloga.
                   </p>
                 </motion.div>
 
@@ -102,7 +102,7 @@ const About = () => {
                   className="space-y-6"
                 >
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Mi vocación es acercar el mundo bíblico a través de sus lenguas originales, permitiendo una comprensión más auténtica y profunda de los textos sagrados.
+                    Soy profesora universitaria y enseño Hebreo y Griego Bíblicos, Literatura de la Biblia y Teología Bíblica. He estudiado en Cambridge, Roma y Jerusalén. Durante seis años he dirigido la revista Tierra Santa.
                   </p>
                   
                   <div className="py-4">
@@ -112,18 +112,10 @@ const About = () => {
                   <p className="text-lg text-stone-600 leading-relaxed">
                     Como <strong>profesora universitaria</strong>, he dedicado años a la formación de estudiantes en el estudio riguroso del Antiguo y Nuevo Testamento, combinando el análisis filológico con el contexto histórico y cultural.
                   </p>
-
-                  <div className="py-6">
-                    <img src={RolloImage} alt="Rollo de la Biblia" className="w-full h-auto rounded-xl shadow-md" />
-                  </div>
                   
                   <p className="text-lg text-stone-600 leading-relaxed mt-6">
-                    Además de mi labor docente, soy <strong>conferenciante</strong> y comunicadora en <strong>Radio María</strong>, espacios donde comparto mi pasión por la Biblia y la cultura del mundo antiguo.
+                    Y lo más importante: soy una apasionada de la Palabra de Dios. Desde muy jovencita me sentí llamada por Él a transmitir su Palabra y hacerla amable y entendible.
                   </p>
-                  
-                  <div className="py-2">
-                    <img src={Inma05} alt="Inma en conferencias" className="w-full h-auto rounded-xl shadow-md" />
-                  </div>
                 </motion.div>
               </div>
 

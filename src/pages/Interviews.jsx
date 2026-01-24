@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { PlayCircle, Music } from 'lucide-react';
 import rneLogo from '../assets/rne.png';
+import InmaImg from '../assets/Inma.05.png';
 
 const Interviews = () => {
   return (
@@ -24,9 +25,22 @@ const Interviews = () => {
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Entrevistas
               </h1>
-              <p className="text-xl text-stone-600 font-light">
+              <p className="text-xl text-stone-600 font-light mb-12">
                 Apariciones en medios de comunicación y conversaciones
               </p>
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="mb-12 max-w-2xl mx-auto"
+              >
+                <img 
+                  src={InmaImg} 
+                  alt="Inmaculada Rodríguez Torné" 
+                  className="w-full h-auto rounded-2xl shadow-xl"
+                />
+              </motion.div>
             </motion.div>
           </div>
         </section>
