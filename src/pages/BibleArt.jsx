@@ -40,34 +40,46 @@ const BibleArt = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="mb-16 max-w-2xl mx-auto"
-              >
-                <img 
-                  className="w-full h-auto object-cover rounded-2xl shadow-lg" 
-                  alt="Providencia" 
-                  src={ProvidenciaImage} 
-                />
-              </motion.div>
+              
+              <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
+                <motion.div 
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="flex-1 lg:text-left text-center"
+                >
+                  <Palette className="inline-block lg:block text-amber-900 mb-6" size={48} />
+                  <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">
+                    Inma y sus dibujos bíblicos
+                  </h2>
+                  <p className="text-xl text-stone-600 italic font-serif leading-relaxed">
+                    "Durante años he realizado dibujos para la revista Vida Nueva. La caligrafía y el dibujo forman parte de mis aficiones más queridas."
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="flex-1 max-w-md"
+                >
+                  <img 
+                    className="w-full h-auto object-cover rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-500" 
+                    alt="Providencia" 
+                    src={ProvidenciaImage} 
+                  />
+                </motion.div>
+              </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-stone-50 rounded-2xl p-8 sm:p-12 text-center border border-stone-200"
+                className="bg-stone-50 rounded-2xl p-8 sm:p-12 border border-stone-200"
               >
-                <Palette className="mx-auto text-amber-900 mb-6" size={48} />
-                <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">
-                  Inma y sus dibujos bíblicos
-                </h2>
-                <p className="text-xl text-stone-600 italic mb-12 max-w-3xl mx-auto font-serif">
-                  "Durante años he realizado dibujos para la revista Vida Nueva. La caligrafía y el dibujo forman parte de mis aficiones más queridas."
-                </p>
                 
                 {/* Galería de imágenes */}
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 mb-12 text-left">
