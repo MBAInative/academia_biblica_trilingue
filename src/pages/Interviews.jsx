@@ -88,6 +88,23 @@ const Interviews = () => {
                     </motion.div>
                   ))}
                 </div>
+
+                <div className="mt-12 border-t border-stone-100 pt-12">
+                  <video controls className="w-full rounded-xl shadow-xl bg-black aspect-video mb-6">
+                    <source src="/videos/entrevista-rtve.mp4" type="video/mp4" />
+                    Tu navegador no soporta la reproducción de video.
+                  </video>
+                  <div className="text-center">
+                    <a 
+                      href="https://www.rtve.es/play/videos/ultimas-preguntas/palabra-cristo-habite/16908996/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-amber-900 font-medium hover:text-amber-800 underline transition-colors"
+                    >
+                      Ver entrevista completa en RTVE Play
+                    </a>
+                  </div>
+                </div>
               </motion.div>
               
               <motion.div
