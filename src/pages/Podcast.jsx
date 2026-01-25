@@ -6,7 +6,7 @@ import { PlayCircle } from 'lucide-react';
 const Podcast = () => {
   const episodes = [
     {
-      title: "Fundamentos Bíblicos para una Ecología con Fe",
+      title: "1. Fundamentos Bíblicos para una Ecología con Fe",
       link: "https://open.spotify.com/episode/0lokAjGuJNNds0iKLFKtPp",
       embed: "https://open.spotify.com/embed/episode/0lokAjGuJNNds0iKLFKtPp",
       description: `Iniciamos este podcast de Biblia y Ecología de la mano de la biblista Inmaculada Rodríguez Torné. En este primer episodio, sentamos las bases para comprender cómo las Sagradas Escrituras —Palabra de Dios en lenguaje humano—nos invitan hoy a cuidar nuestra "casa común".
@@ -22,7 +22,7 @@ Te invito a escuchar y rezar con el majestuoso poema de la creación, dejándote
 Seguiremos profundizando en las primeras páginas de la Biblia en el siguiente podcast.`
     },
     {
-      title: "¿Qué hace que el relato del Génesis sea único en la historia?",
+      title: "2. ¿Qué hace que el relato del Génesis sea único en la historia?",
       link: "https://open.spotify.com/episode/4d4nSzE5eGig0r08fPRS3T",
       embed: "https://open.spotify.com/embed/episode/4d4nSzE5eGig0r08fPRS3T",
       description: `En este 2º episodio de Biblia y Ecología seguimos adentrándonos en los primeros versículos de la creación (Gn 1,1-2,4).
@@ -64,7 +64,7 @@ A partir de Gn 1,27, meditamos qué significa ser imagen de Dios: somos imagen d
 Una invitación a redescubrir la unidad en la diversidad, a custodiar la vida y a dejarnos transformar por la mirada que nos dice, hoy también: “Y vio Dios que era bueno.”`
     },
     {
-      title: "Biblia y Ecología (5): Dios nos creó vegetarianos",
+      title: "5. Dios nos creó vegetarianos",
       link: "https://open.spotify.com/episode/1IOzQgGLhzdXePYTS4v1sf",
       embed: "https://open.spotify.com/embed/episode/1IOzQgGLhzdXePYTS4v1sf",
       description: `En este nuevo programa del podcast “Biblia y Ecología” seguimos profundizando en el primer relato de la creación (Gn 1,1–2,4), el relato sacerdotal del siglo VI a. C., donde Dios crea por medio de su palabra.
