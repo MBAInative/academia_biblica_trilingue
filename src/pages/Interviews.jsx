@@ -4,8 +4,34 @@ import { motion } from 'framer-motion';
 import { PlayCircle, Music } from 'lucide-react';
 import rneLogo from '../assets/rne.png';
 import InmaImg from '../assets/Inma.05.png';
+import rtveLogo from '../assets/RTVE.png';
+import UltimasPreguntasImg from '../assets/UltimasPreguntas.jpg';
+import Mariangeles01Img from '../assets/Mariangeles.01.png';
+import Inma06Img from '../assets/Inma.06.png';
+import Inma07Img from '../assets/Inma.07.png';
+import Mariangeles02Img from '../assets/Mariangeles.02.png';
+import Inma08Img from '../assets/Inma.08.png';
+import Inma09Img from '../assets/Inma.09.png';
+import Mariangeles03Img from '../assets/Mariangeles.03.png';
+import Inma10Img from '../assets/Inma.10.png';
+import Inma11Img from '../assets/Inma.11.png';
+import Mariangeles04Img from '../assets/Mariangeles.04.png';
 
 const Interviews = () => {
+  const rtveImages = [
+    UltimasPreguntasImg,
+    Mariangeles01Img,
+    Inma06Img,
+    Inma07Img,
+    Mariangeles02Img,
+    Inma08Img,
+    Inma09Img,
+    Mariangeles03Img,
+    Inma10Img,
+    Inma11Img,
+    Mariangeles04Img
+  ];
+
   return (
     <>
       <Helmet>
@@ -28,6 +54,41 @@ const Interviews = () => {
               <p className="text-xl text-stone-600 font-light mb-12">
                 Apariciones en medios de comunicación y conversaciones
               </p>
+
+              {/* RTVE Section */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-16 shadow-lg border border-stone-200"
+              >
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+                  <div className="text-left max-w-2xl">
+                    <p className="text-lg text-stone-800 font-medium leading-relaxed">
+                      Inmaculada entrevistada el Domingo de la Palabra, 25 de Enero de 2026, en RTVE por Mariangeles Fernández en Últimas Preguntas.
+                    </p>
+                  </div>
+                  <img src={rtveLogo} alt="RTVE" className="h-12 object-contain" />
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {rtveImages.map((img, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="overflow-hidden rounded-lg shadow-sm"
+                    >
+                      <img 
+                        src={img} 
+                        alt={`Entrevista RTVE ${index + 1}`} 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
               
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
