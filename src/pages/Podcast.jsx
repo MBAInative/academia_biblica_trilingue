@@ -6,6 +6,12 @@ import { PlayCircle } from 'lucide-react';
 const Podcast = () => {
   const episodes = [
     {
+      title: "0. Ecología Bíblica",
+      link: "https://open.spotify.com/episode/5LIPU6GO8hgwqLxWcT2YfF?si=ltrowErgTpqKlsj2IabQ3A&nd=1",
+      embed: "https://open.spotify.com/embed/episode/5LIPU6GO8hgwqLxWcT2YfF",
+      description: ""
+    },
+    {
       title: "1. Fundamentos Bíblicos para una Ecología con Fe",
       link: "https://open.spotify.com/episode/0lokAjGuJNNds0iKLFKtPp",
       embed: "https://open.spotify.com/embed/episode/0lokAjGuJNNds0iKLFKtPp",
