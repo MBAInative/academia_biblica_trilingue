@@ -5,31 +5,24 @@ import { PlayCircle, Music } from 'lucide-react';
 import rneLogo from '../assets/rne.png';
 import InmaImg from '../assets/Inma.05.png';
 import rtveLogo from '../assets/RTVE.png';
-import UltimasPreguntasImg from '../assets/UltimasPreguntas.jpg';
-import Mariangeles01Img from '../assets/Mariangeles.01.png';
-import Inma06Img from '../assets/Inma.06.png';
-import Inma07Img from '../assets/Inma.07.png';
-import Mariangeles02Img from '../assets/Mariangeles.02.png';
-import Inma08Img from '../assets/Inma.08.png';
-import Inma09Img from '../assets/Inma.09.png';
-import Mariangeles03Img from '../assets/Mariangeles.03.png';
-import Inma10Img from '../assets/Inma.10.png';
-import Inma11Img from '../assets/Inma.11.png';
-import Mariangeles04Img from '../assets/Mariangeles.04.png';
+import RTVE01 from '../assets/RTVE/01.png';
+import RTVE02 from '../assets/RTVE/02.png';
+import RTVE03 from '../assets/RTVE/03.png';
+import RTVE04 from '../assets/RTVE/04.png';
+import RTVE05 from '../assets/RTVE/05.png';
+import RTVE06 from '../assets/RTVE/06.png';
+import RTVE07 from '../assets/RTVE/07.png';
+import RTVE08 from '../assets/RTVE/08.png';
+import RTVE09 from '../assets/RTVE/09.png';
+import RTVE10 from '../assets/RTVE/10.png';
+import RTVE11 from '../assets/RTVE/11.png';
+import RTVE12 from '../assets/RTVE/12.png';
 
 const Interviews = () => {
   const rtveImages = [
-    UltimasPreguntasImg,
-    Mariangeles01Img,
-    Inma06Img,
-    Inma07Img,
-    Mariangeles02Img,
-    Inma08Img,
-    Inma09Img,
-    Mariangeles03Img,
-    Inma10Img,
-    Inma11Img,
-    Mariangeles04Img
+    RTVE01, RTVE02, RTVE03, RTVE04, 
+    RTVE05, RTVE06, RTVE07, RTVE08, 
+    RTVE09, RTVE10, RTVE11, RTVE12
   ];
 
   return (
