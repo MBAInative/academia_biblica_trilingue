@@ -24,11 +24,6 @@ const About = () => {
       description: 'Profesora universitaria especializada en lenguas bíblicas y Antiguo Testamento'
     },
     {
-      icon: Globe,
-      title: 'Revista Tierra Santa',
-      description: 'Colaboradora de prestigio en temas de cultura bíblica y Tierra Santa'
-    },
-    {
       icon: Radio,
       title: 'Radio María',
       description: 'Comunicadora en medios especializados en contenido religioso y cultural'
