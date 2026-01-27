@@ -17,6 +17,7 @@ import RTVE09 from '../assets/RTVE/09.png';
 import RTVE10 from '../assets/RTVE/10.png';
 import RTVE11 from '../assets/RTVE/11.png';
 import RTVE12 from '../assets/RTVE/12.png';
+import FronteraImg from '../assets/RTVE/Frontera.jpeg';
 
 const Interviews = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -65,6 +66,21 @@ const Interviews = () => {
                   </div>
                   <img src={rtveLogo} alt="RTVE" className="h-12 object-contain" />
                 </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="mb-12 max-w-3xl mx-auto cursor-pointer group"
+                  onClick={() => setSelectedImage(FronteraImg)}
+                >
+                  <img 
+                    src={FronteraImg} 
+                    alt="Entrevista Frontera RTVE" 
+                    className="w-full h-auto rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                </motion.div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {rtveImages.map((img, index) => (
