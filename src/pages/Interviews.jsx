@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { motion } from 'framer-motion';
-import { PlayCircle, Music } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { PlayCircle, Music, X } from 'lucide-react';
 import rneLogo from '../assets/rne.png';
 import InmaImg from '../assets/Inma.05.png';
 import rtveLogo from '../assets/RTVE.png';
@@ -19,6 +19,8 @@ import RTVE11 from '../assets/RTVE/11.png';
 import RTVE12 from '../assets/RTVE/12.png';
 
 const Interviews = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const rtveImages = [
     RTVE01, RTVE02, RTVE03, RTVE04, 
     RTVE05, RTVE06, RTVE07, RTVE08, 
@@ -71,12 +73,13 @@ const Interviews = () => {
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="overflow-hidden rounded-lg shadow-sm"
+                      className="overflow-hidden rounded-lg shadow-sm cursor-pointer group"
+                      onClick={() => setSelectedImage(img)}
                     >
                       <img 
                         src={img} 
                         alt={`Entrevista RTVE ${index + 1}`} 
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </motion.div>
                   ))}
@@ -206,6 +209,39 @@ const Interviews = () => {
             </div>
           </div>
         </section>
+
+        {/* Lightbox Modal */}
+        <AnimatePresence>
+          {selectedImage && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedImage(null)}
+              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out"
+            >
+              <button 
+                className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-50 p-2"
+                onClick={() => setSelectedImage(null)}
+              >
+                <X size={40} />
+              </button>
+              
+              <motion.img
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                src={selectedImage}
+                alt="Imagen ampliada"
+                className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default"
+                onClick={(e) => e.stopPropagation()}
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   );
