@@ -58,29 +58,37 @@ const Interviews = () => {
                 transition={{ duration: 0.8 }}
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-16 shadow-lg border border-stone-200"
               >
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-                  <div className="text-left max-w-2xl">
-                    <p className="text-lg text-stone-800 font-medium leading-relaxed">
-                      Inmaculada entrevistada el Domingo de la Palabra, 25 de Enero de 2026, en RTVE por Mariangeles Fernández en Últimas Preguntas.
-                    </p>
+                {/* Frontera Section */}
+                <div className="mb-12">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+                    <h3 className="text-2xl font-serif font-bold text-stone-800 text-center">
+                      Entrevistas en Frontera con Maria Ángeles Fernández
+                    </h3>
+                    <img src={rtveLogo} alt="RTVE" className="h-10 object-contain" />
                   </div>
-                  <img src={rtveLogo} alt="RTVE" className="h-12 object-contain" />
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-md mx-auto cursor-pointer group"
+                    onClick={() => setSelectedImage(FronteraImg)}
+                  >
+                    <img 
+                      src={FronteraImg} 
+                      alt="Entrevista Frontera RTVE" 
+                      className="w-full h-auto rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300"
+                    />
+                  </motion.div>
                 </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="mb-12 max-w-3xl mx-auto cursor-pointer group"
-                  onClick={() => setSelectedImage(FronteraImg)}
-                >
-                  <img 
-                    src={FronteraImg} 
-                    alt="Entrevista Frontera RTVE" 
-                    className="w-full h-auto rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300"
-                  />
-                </motion.div>
+                {/* Últimas Preguntas Section */}
+                <div className="mb-8 text-center max-w-3xl mx-auto">
+                  <p className="text-lg text-stone-800 font-medium leading-relaxed">
+                    Inmaculada entrevistada el Domingo de la Palabra, 25 de Enero de 2026, en RTVE por Mariangeles Fernández en Últimas Preguntas.
+                  </p>
+                </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {rtveImages.map((img, index) => (
