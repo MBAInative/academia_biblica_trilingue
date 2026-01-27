@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import LogoABT from '../assets/LogoABT.jpg';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,12 @@ const Header = () => {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img 
+              src={LogoABT} 
+              alt="Academia Bíblica Trilingüe Logo" 
+              className="h-12 w-auto rounded-lg shadow-sm group-hover:shadow-md transition-shadow" 
+            />
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-2xl sm:text-3xl font-serif font-bold text-amber-900"
