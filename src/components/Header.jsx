@@ -35,19 +35,19 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src={LogoABT} 
-              alt="Academia Bíblica Trilingüe Logo" 
-              className="h-12 w-auto rounded-lg shadow-sm group-hover:shadow-md transition-shadow" 
-            />
+        <div className="flex items-center justify-between py-4">
+          <Link to="/" className="flex flex-col items-center space-y-1 group">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-2xl sm:text-3xl font-serif font-bold text-amber-900"
             >
               IRT
             </motion.div>
+            <img 
+              src={LogoABT} 
+              alt="Academia Bíblica Trilingüe Logo" 
+              className="w-auto h-auto max-w-[200px] rounded-lg shadow-sm" 
+            />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1">
