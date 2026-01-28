@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LogoABT from '../assets/LogoABT.jpg';
 import RolloImage from '../assets/Rollo.jpg';
 
 const Academy = () => {
@@ -58,6 +59,7 @@ const Academy = () => {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
+              <img src={LogoABT} alt="Logo ABT" className="h-16 mx-auto mb-6 object-contain" />
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Academia de Lenguas Bíblicas
               </h1>

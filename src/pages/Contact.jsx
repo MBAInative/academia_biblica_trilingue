@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useForm, ValidationError } from '@formspree/react';
+import LogoABT from '../assets/LogoABT.jpg';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mjggaglb");
@@ -50,6 +51,7 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
+              <img src={LogoABT} alt="Logo ABT" className="h-16 mx-auto mb-6 object-contain" />
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Contacto
               </h1>

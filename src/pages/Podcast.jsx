@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { PlayCircle } from 'lucide-react';
+import LogoABT from '../assets/LogoABT.jpg';
 
 const Podcast = () => {
   const episodes = [
@@ -104,6 +105,7 @@ Una invitación a redescubrir nuestra vocación más profunda: ser imagen del Cr
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
+              <img src={LogoABT} alt="Logo ABT" className="h-16 mx-auto mb-6 object-contain" />
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Podcast
               </h1>

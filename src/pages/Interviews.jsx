@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlayCircle, Music, X } from 'lucide-react';
-import rneLogo from '../assets/rne.png';
+import FronteraIcon from '../assets/FronteraIcono.jpg';
+import HorizonteIcon from '../assets/HorizonteIcono.jpg';
 import InmaImg from '../assets/Inma.05.png';
+import LogoABT from '../assets/LogoABT.jpg';
 import rtveLogo from '../assets/RTVE.png';
 import RTVE01 from '../assets/RTVE/01.png';
 import RTVE02 from '../assets/RTVE/02.png';
@@ -44,6 +46,7 @@ const Interviews = () => {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
+              <img src={LogoABT} alt="Logo ABT" className="h-16 mx-auto mb-6 object-contain" />
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Entrevistas
               </h1>
@@ -59,20 +62,17 @@ const Interviews = () => {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-16 shadow-lg border border-stone-200"
               >
                 {/* Frontera Section */}
-                <div className="mb-12">
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-                    <h3 className="text-2xl font-serif font-bold text-stone-800 text-center">
-                      Entrevistas en Frontera con Maria Ángeles Fernández
-                    </h3>
-                    <img src={rtveLogo} alt="RTVE" className="h-10 object-contain" />
-                  </div>
+                <div className="mb-16 pb-12 border-b border-stone-100">
+                  <h3 className="text-2xl font-serif font-bold text-stone-800 text-center mb-8">
+                    Entrevistas en Frontera con Maria Ángeles Fernández
+                  </h3>
 
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-md mx-auto cursor-pointer group"
+                    className="max-w-xs mx-auto cursor-pointer group"
                     onClick={() => setSelectedImage(FronteraImg)}
                   >
                     <img 
@@ -84,13 +84,15 @@ const Interviews = () => {
                 </div>
 
                 {/* Últimas Preguntas Section */}
-                <div className="mb-8 text-center max-w-3xl mx-auto">
-                  <p className="text-lg text-stone-800 font-medium leading-relaxed">
-                    Inmaculada entrevistada el Domingo de la Palabra, 25 de Enero de 2026, en RTVE por Mariangeles Fernández en Últimas Preguntas.
-                  </p>
-                </div>
+                <div className="mb-12">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
+                    <p className="text-lg text-stone-800 font-medium leading-relaxed text-center max-w-2xl">
+                      Inmaculada entrevistada el Domingo de la Palabra, 25 de Enero de 2026, en RTVE por Mariangeles Fernández en Últimas Preguntas.
+                    </p>
+                    <img src={rtveLogo} alt="RTVE" className="h-10 object-contain" />
+                  </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {rtveImages.map((img, index) => (
                     <motion.div
                       key={index}
@@ -124,6 +126,7 @@ const Interviews = () => {
                       Ver entrevista completa en RTVE Play
                     </a>
                   </div>
+                </div>
                 </div>
               </motion.div>
               
@@ -168,9 +171,9 @@ const Interviews = () => {
                   </div>
                   <div className="w-32 flex-shrink-0">
                     <img 
-                      src={rneLogo} 
-                      alt="RNE Logo" 
-                      className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" 
+                      src={FronteraIcon} 
+                      alt="Frontera Logo" 
+                      className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded-lg" 
                     />
                   </div>
                 </div>
@@ -200,7 +203,7 @@ const Interviews = () => {
                       <div className="p-2 bg-rose-100 rounded-lg">
                         <Music className="text-rose-700" size={24} />
                       </div>
-                      <span className="text-rose-700 font-bold tracking-wider">RNE - FRONTERA</span>
+                      <span className="text-rose-700 font-bold tracking-wider">RNE - HORIZONTE</span>
                     </div>
                     <h3 className="text-2xl font-serif font-bold text-stone-800 leading-tight">
                       Entrevista sobre la Pascua de Resurrección
@@ -211,9 +214,9 @@ const Interviews = () => {
                   </div>
                   <div className="w-32 flex-shrink-0">
                     <img 
-                      src={rneLogo} 
-                      alt="RNE Logo" 
-                      className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" 
+                      src={HorizonteIcon} 
+                      alt="Horizonte Logo" 
+                      className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded-lg" 
                     />
                   </div>
                 </div>

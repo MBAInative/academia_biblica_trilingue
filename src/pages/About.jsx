@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
+import LogoABT from '../assets/LogoABT.jpg';
 import InmaImage from '../assets/Inma.04.png';
 import Inma02 from '../assets/Inma.02.png';
 import Inma03 from '../assets/Inma.03.jpg';
@@ -46,6 +47,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
+              <img src={LogoABT} alt="Logo ABT" className="h-16 mx-auto mb-6 object-contain" />
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Acerca de mí
               </h1>

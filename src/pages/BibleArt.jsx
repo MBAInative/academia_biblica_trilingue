@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, X } from 'lucide-react';
 import ProvidenciaImage from '../assets/dibujos/Providencia quizas tarjeton.jpg';
+import LogoABT from '../assets/LogoABT.jpg';
 
 const BibleArt = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -30,6 +31,7 @@ const BibleArt = () => {
               transition={{ duration: 0.8 }}
               className="max-w-4xl mx-auto text-center"
             >
+              <img src={LogoABT} alt="Logo ABT" className="h-16 mx-auto mb-6 object-contain" />
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Biblia y Arte
               </h1>
