@@ -184,7 +184,6 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <img src={LogoABT} alt="Logo ABT" className="h-20 mx-auto mb-8 object-contain" />
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-800 mb-6 leading-tight">
                 Adéntrate en el mundo de la Biblia a través de sus lenguas originales
               </h1>

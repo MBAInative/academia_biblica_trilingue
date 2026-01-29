@@ -43,11 +43,6 @@ const Header = () => {
             >
               IRT
             </motion.div>
-            <img 
-              src={LogoABT} 
-              alt="Logo" 
-              className="h-10 w-auto rounded mt-1 shadow-sm" 
-            />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1">

@@ -61,28 +61,6 @@ const Interviews = () => {
                 transition={{ duration: 0.8 }}
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 mb-16 shadow-lg border border-stone-200"
               >
-                {/* Frontera Section */}
-                <div className="mb-16 pb-12 border-b border-stone-100">
-                  <h3 className="text-2xl font-serif font-bold text-stone-800 text-center mb-8">
-                    Entrevistas en Frontera con Maria Ángeles Fernández
-                  </h3>
-
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="max-w-xs mx-auto cursor-pointer group"
-                    onClick={() => setSelectedImage(FronteraImg)}
-                  >
-                    <img 
-                      src={FronteraImg} 
-                      alt="Entrevista Frontera RTVE" 
-                      className="w-full h-auto rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300"
-                    />
-                  </motion.div>
-                </div>
-
                 {/* Últimas Preguntas Section */}
                 <div className="mb-12">
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
