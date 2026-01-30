@@ -151,7 +151,7 @@ const Interviews = () => {
                     <img 
                       src={FronteraIcon} 
                       alt="Frontera Logo" 
-                      className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded-lg" 
+                      className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300" 
                     />
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const Interviews = () => {
                     <img 
                       src={HorizonteIcon} 
                       alt="Horizonte Logo" 
-                      className="w-full h-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 rounded-lg" 
+                      className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300" 
                     />
                   </div>
                 </div>
