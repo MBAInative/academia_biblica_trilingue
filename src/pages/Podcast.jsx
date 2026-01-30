@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { PlayCircle } from 'lucide-react';
+import { PlayCircle, ExternalLink } from 'lucide-react';
 import LogoABT from '../assets/logo-abt.jpg';
+import CustodiosImg from '../assets/custodios-creacion.png';
+import PinceladasImg from '../assets/pinceladas-biblicas.jpg';
 
 const Podcast = () => {
   const episodes = [
@@ -120,15 +122,29 @@ Una invitación a redescubrir nuestra vocación más profunda: ser imagen del Cr
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               
+              {/* Menú de Navegación Interna */}
+              <div className="flex flex-wrap gap-4 justify-center mb-16">
+                <a href="#ecologia" className="px-6 py-2 rounded-full bg-stone-100 text-stone-700 hover:bg-amber-100 hover:text-amber-900 transition-colors font-medium border border-stone-200">
+                  Ecología Bíblica
+                </a>
+                <a href="#custodios" className="px-6 py-2 rounded-full bg-stone-100 text-stone-700 hover:bg-amber-100 hover:text-amber-900 transition-colors font-medium border border-stone-200">
+                  Custodios de la Creación
+                </a>
+                <a href="#pinceladas" className="px-6 py-2 rounded-full bg-stone-100 text-stone-700 hover:bg-amber-100 hover:text-amber-900 transition-colors font-medium border border-stone-200">
+                  Pinceladas Bíblicas
+                </a>
+              </div>
+
               <motion.div
+                id="ecologia"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="mb-12"
+                className="mb-20 scroll-mt-28"
               >
-                <div className="flex items-center space-x-4 mb-10 border-b border-green-200 pb-4">
-                  <h2 className="text-3xl font-serif font-bold text-green-700">
+                <div className="flex items-center space-x-4 mb-10 border-b border-amber-200 pb-4">
+                  <h2 className="text-3xl font-serif font-bold text-amber-800">
                     Ecología Bíblica
                   </h2>
                 </div>
@@ -175,6 +191,90 @@ Una invitación a redescubrir nuestra vocación más profunda: ser imagen del Cr
                       </a>
                     </motion.div>
                   ))}
+                </div>
+              </motion.div>
+
+              {/* Custodios de la creación */}
+              <motion.div
+                id="custodios"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-20 scroll-mt-28"
+              >
+                <div className="flex items-center space-x-4 mb-10 border-b border-amber-200 pb-4">
+                  <h2 className="text-3xl font-serif font-bold text-amber-800">
+                    Custodios de la creación
+                  </h2>
+                </div>
+
+                <div className="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/3">
+                      <img 
+                        src={CustodiosImg} 
+                        alt="Custodios de la creación" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="md:w-2/3 p-8 flex flex-col justify-center">
+                      <p className="text-stone-600 text-lg leading-relaxed mb-8">
+                        "Desde 2022 colaboro en el programa Custodios de la creación de Radio María con la sección <strong>"Custodiando desde las Sagradas Escrituras"</strong> donde comento y explico los pasajes bíblicos que tienen mucho que decirnos de ecología."
+                      </p>
+                      <a
+                        href="https://radiomaria.es/programa/custodios-de-la-creacion/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-6 py-3 bg-amber-900 text-white rounded-lg font-medium hover:bg-amber-800 transition-all self-start"
+                      >
+                        <ExternalLink className="mr-2" size={20} />
+                        Ir al programa Custodios de la creación
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Pinceladas Bíblicas */}
+              <motion.div
+                id="pinceladas"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-20 scroll-mt-28"
+              >
+                <div className="flex items-center space-x-4 mb-10 border-b border-amber-200 pb-4">
+                  <h2 className="text-3xl font-serif font-bold text-amber-800">
+                    Pinceladas Bíblicas
+                  </h2>
+                </div>
+
+                <div className="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/3">
+                      <img 
+                        src={PinceladasImg} 
+                        alt="Pinceladas Bíblicas" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="md:w-2/3 p-8 flex flex-col justify-center">
+                      <p className="text-stone-600 text-lg leading-relaxed mb-8">
+                        "De 2020-2024 estuve colaborando en Radio María en el programa Tiempo de Cuidar con la sección <strong>Pinceladas Bíblicas</strong>: unos pocos minutos para dar un poco de color a alguna palabra en hebreo o griego, hablar de las curaciones de Jesús y explicar desde la filología y la teología algún detalle de los pasajes bíblicos."
+                      </p>
+                      <a
+                        href="https://radiomaria.es/programa/tiempo-de-cuidar/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-6 py-3 bg-amber-900 text-white rounded-lg font-medium hover:bg-amber-800 transition-all self-start"
+                      >
+                        <ExternalLink className="mr-2" size={20} />
+                        Ir al programa Tiempo de Cuidar
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
