@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import LogoABT from '../assets/LogoABT.jpg';
+import LogoABT from '../assets/logo-abt.jpg';
 import RolloImage from '../assets/Rollo.jpg';
 
 const Academy = () => {

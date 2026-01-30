@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
-import LogoABT from '../assets/LogoABT.jpg';
+import LogoABT from '../assets/logo-abt.jpg';
 import InmaImage from '../assets/Inma.04.png';
 import Inma02 from '../assets/Inma.02.png';
 import Inma03 from '../assets/Inma.03.jpg';

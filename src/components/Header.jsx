@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import LogoABT from '../assets/LogoABT.jpg';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

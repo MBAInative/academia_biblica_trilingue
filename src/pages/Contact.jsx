@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useForm, ValidationError } from '@formspree/react';
-import LogoABT from '../assets/LogoABT.jpg';
+import LogoABT from '../assets/logo-abt.jpg';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mjggaglb");

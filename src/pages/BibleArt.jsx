@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, X } from 'lucide-react';
 import ProvidenciaImage from '../assets/dibujos/Providencia quizas tarjeton.jpg';
-import LogoABT from '../assets/LogoABT.jpg';
+import LogoABT from '../assets/logo-abt.jpg';
 
 const BibleArt = () => {
   const [selectedImage, setSelectedImage] = useState(null);

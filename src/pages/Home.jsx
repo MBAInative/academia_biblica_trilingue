@@ -13,7 +13,7 @@ import InmaImage from '../assets/Inma.04.png';
 import GemmaImg from '../assets/Gemma.jpg';
 import MaikaImg from '../assets/Maika.jpg';
 import IsabelImg from '../assets/Isabel.png';
-import LogoABT from '../assets/LogoABT.jpg';
+import LogoABT from '../assets/logo-abt.jpg';
 
 import ConfImg1 from '@/assets/conferencias/Imagen.1.jpeg';
 import ConfImg2 from '@/assets/conferencias/Imagen.2.jpeg';

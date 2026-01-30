@@ -9,7 +9,7 @@ import ConfImg3 from '@/assets/conferencias/Imagen.3.jpeg';
 import ConfImg4 from '@/assets/conferencias/Imagen.4.jpeg';
 import ConfImg5 from '@/assets/conferencias/Imagen.5.jpeg';
 import ConfImg6 from '@/assets/conferencias/Imagen.6.jpeg';
-import LogoABT from '@/assets/LogoABT.jpg';
+import LogoABT from '@/assets/logo-abt.jpg';
 
 const Courses = () => {
   const trainingProposal = [
