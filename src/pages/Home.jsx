@@ -546,7 +546,7 @@ const Home = () => {
                                 <div className="flex-1">
                                   <Quote className="text-amber-900/20 mb-2" size={32} />
                                   <p className="text-stone-700 italic text-lg leading-relaxed">
-                                    "Médica ORL. Las clases me aportan un montón de cosas Y todas buenas: momentos de abstracción y concentración absoluta , reto personal diario, disciplina para estudiar todos los días un ratito , aprender cosas sobre una cultura diferente, ampliar conocimiento sobre la Biblia.... y haber conocido a un grupo de gente fantástica que lucha en cada clase con sus propias limitaciones de tiempo, edad, etc."
+                                    "Médica ORL. Las clases me aportan un montón de cosas Y todas buenas: momentos de abstracción y concentración absoluta, reto personal diario, disciplina para estudiar todos los días un ratito, aprender cosas sobre una cultura diferente, ampliar conocimiento sobre la Biblia.... y haber conocido a un grupo de gente fantástica que lucha en cada clase con sus propias limitaciones de tiempo, edad, etc."
                                   </p>
                                 </div>
                               </div>
@@ -634,7 +634,7 @@ const Home = () => {
                                 <div className="flex-1">
                                   <Quote className="text-amber-900/20 mb-2" size={32} />
                                   <p className="text-stone-700 italic text-lg leading-relaxed">
-                                    "Soy arquitecto técnico. Las clases de Hebreo son más q aprender un idioma. Inma explica el significado bíblico y genera ansia de conocimiento. Hay q estudiar, pero se puede compaginar con el trabajo. Para mí es apasionante."
+                                    "Soy arquitecto técnico. Las clases de Hebreo son más que aprender un idioma. Inma explica el significado bíblico y genera ansia de conocimiento. Hay que estudiar, pero se puede compaginar con el trabajo. Para mí es apasionante."
                                   </p>
                                 </div>
                               </div>
