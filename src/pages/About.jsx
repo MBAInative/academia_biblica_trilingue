@@ -17,12 +17,12 @@ const About = () => {
     {
       icon: GraduationCap,
       title: 'Formación Académica',
-      description: 'Dra. en Filología Bíblica Trilingüe y Teóloga con amplia trayectoria académica'
+      description: 'Licenciada en Filología Clásica, doctora en Filología Bíblica Trilingüe y teóloga.'
     },
     {
       icon: BookOpen,
       title: 'Docencia Universitaria',
-      description: 'Profesora universitaria especializada en lenguas bíblicas y Antiguo Testamento'
+      description: 'Profesora universitaria desde 2010  especializada en Lenguas Bíblicas, Literatura Sapiencial y Teología Bíblica.'
     },
     {
       icon: Radio,
@@ -73,7 +73,7 @@ const About = () => {
                     Inmaculada Rodríguez Torné
                   </h2>
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Soy Inmaculada Rodríguez Torné, y quizás a alguno le suene mi nombre o mi voz porque colaboro en Radio María. Soy biblista, licenciada en Filología Clásica, doctora en Filología Bíblica Trilingüe y teóloga.
+                    Soy Inmaculada Rodríguez Torné. Soy biblista, licenciada en Filología Clásica, doctora en Filología Bíblica Trilingüe y teóloga. Soy profesora universitaria y enseño, desde hace años, Hebreo y Griego Bíblicos, Literatura Sapiencial y Teología Bíblica.
                   </p>
                 </motion.div>
 
@@ -99,7 +99,7 @@ const About = () => {
                   className="space-y-6"
                 >
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Soy profesora universitaria y enseño Hebreo y Griego Bíblicos, Literatura de la Biblia y Teología Bíblica. He estudiado en Cambridge, Roma y Jerusalén. Durante seis años he dirigido la revista Tierra Santa.
+                    He estudiado en Cambridge, Roma y Jerusalén, donde he vivido largas temporadas. Durante seis años he dirigido la revista Tierra Santa. Desde 2020 colaboro en Radio María con "Pinceladas Bíblicas" y "Biblia y Ecología".
                   </p>
                   
                   <div className="py-4">
@@ -107,10 +107,6 @@ const About = () => {
                   </div>
 
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Como <strong>profesora universitaria</strong>, he dedicado años a la formación de estudiantes en el estudio riguroso del Antiguo y Nuevo Testamento, combinando el análisis filológico con el contexto histórico y cultural.
-                  </p>
-                  
-                  <p className="text-lg text-stone-600 leading-relaxed mt-6">
                     Y lo más importante: soy una apasionada de la Palabra de Dios. Desde muy jovencita me sentí llamada por Él a transmitir su Palabra y hacerla amable y entendible.
                   </p>
                 </motion.div>
