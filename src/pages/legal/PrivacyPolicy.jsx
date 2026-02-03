@@ -28,7 +28,7 @@ const PrivacyPolicy = () => {
                 <h3 className="text-xl font-bold text-stone-800 mt-6 mb-4">1. Responsable del Tratamiento</h3>
                 <ul className="list-disc pl-5 space-y-2 mb-6">
                   <li><strong>Identidad:</strong> Inmaculada Rodríguez Torné</li>
-                  <li><strong>Email:</strong> infohebreo@yahoo.com</li>
+                  <li><strong>Email:</strong> academiabiblicatrilingue@gmail.com</li>
                 </ul>
 
                 <h3 className="text-xl font-bold text-stone-800 mt-6 mb-4">2. Finalidad del Tratamiento</h3>
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
                   <li>Solicitar la limitación del tratamiento.</li>
                 </ul>
                 <p>
-                  Para ejercer estos derechos, puede enviar un correo electrónico a <strong>infohebreo@yahoo.com</strong>.
+                  Para ejercer estos derechos, puede enviar un correo electrónico a <strong>academiabiblicatrilingue@gmail.com</strong>.
                 </p>
 
                 <h3 className="text-xl font-bold text-stone-800 mt-6 mb-4">6. Seguridad de los Datos</h3>

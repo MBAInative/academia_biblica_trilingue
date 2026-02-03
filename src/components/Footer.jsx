@@ -37,9 +37,9 @@ const Footer = () => {
           <div>
             <span className="text-lg font-semibold text-stone-800 mb-4 block">Contacto</span>
             <div className="space-y-3">
-              <a href="mailto:infohebreo@yahoo.com" className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors text-sm">
+              <a href="mailto:academiabiblicatrilingue@gmail.com" className="flex items-center space-x-2 text-stone-600 hover:text-amber-900 transition-colors text-sm">
                 <Mail size={16} />
-                <span>infohebreo@yahoo.com</span>
+                <span>academiabiblicatrilingue@gmail.com</span>
               </a>
               <a 
                 href="https://wa.me/34649454564" 

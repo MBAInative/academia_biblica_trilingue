@@ -306,9 +306,9 @@ const Academy = () => {
                   Información y contacto
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                  <a href="mailto:infohebreo@yahoo.com" className="flex items-center justify-center space-x-3 bg-white rounded-xl p-4 hover:shadow-lg transition-shadow">
+                  <a href="mailto:academiabiblicatrilingue@gmail.com" className="flex items-center justify-center space-x-3 bg-white rounded-xl p-4 hover:shadow-lg transition-shadow">
                     <Mail className="text-amber-900" size={24} />
-                    <span className="text-stone-700">infohebreo@yahoo.com</span>
+                    <span className="text-stone-700">academiabiblicatrilingue@gmail.com</span>
                   </a>
                   <a 
                     href="https://wa.me/34649454564"
