@@ -10,6 +10,7 @@ import ConfImg4 from '@/assets/conferencias/Imagen.4.jpeg';
 import ConfImg5 from '@/assets/conferencias/Imagen.5.jpeg';
 import ConfImg6 from '@/assets/conferencias/Imagen.6.jpeg';
 import LogoABT from '@/assets/logo-abt.jpg';
+import SanBrunoImg from '@/assets/san-bruno.png';
 
 const Courses = () => {
   const trainingProposal = [
@@ -124,6 +125,18 @@ const Courses = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
+              
+              <div className="text-center mb-16">
+                 <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-8">
+                  Cursos y Conferencias
+                </h1>
+                <img 
+                  src={SanBrunoImg} 
+                  alt="San Bruno" 
+                  className="w-full max-w-4xl mx-auto h-auto rounded-2xl shadow-lg mb-12"
+                />
+              </div>
+
               {/* Nueva sección: Propuesta Formativa */}
               <section className="mt-10">
                 <motion.div

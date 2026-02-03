@@ -25,7 +25,7 @@ const Interviews = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const rtveImages = [
-    RTVE01, RTVE02, RTVE03, RTVE04, 
+    RTVE02, RTVE01, RTVE03, RTVE04, 
     RTVE05, RTVE06, RTVE07, RTVE08, 
     RTVE09, RTVE10, RTVE11, RTVE12
   ];
