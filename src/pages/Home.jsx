@@ -42,7 +42,7 @@ const Home = () => {
     {
       icon: Mic,
       title: 'Podcast',
-      description: 'Contenido especializado sobre Biblia y cultura',
+      description: 'Recopilación de los podcasts bíblicos de Radio María',
       link: '/podcast'
     },
     {
@@ -242,7 +242,7 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Formación académica rigurosa en lenguas bíblicas y cultura del mundo antiguo
+              Formación académica en Lenguas Bíblicas (Hebreo y Griego Bíblicos), Literatura de la Biblia y Teología Bíblica
             </p>
           </div>
 

@@ -112,7 +112,7 @@ Una invitación a redescubrir nuestra vocación más profunda: ser imagen del Cr
                 Podcast
               </h1>
               <p className="text-xl text-stone-600 font-light">
-                Contenido especializado sobre Biblia y cultura
+                Recopilación de los podcasts bíblicos de Radio María
               </p>
             </motion.div>
           </div>
