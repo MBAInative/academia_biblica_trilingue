@@ -11,6 +11,7 @@ import ConfImg5 from '@/assets/conferencias/Imagen.5.jpeg';
 import ConfImg6 from '@/assets/conferencias/Imagen.6.jpeg';
 import LogoABT from '@/assets/logo-abt.jpg';
 import SanBrunoImg from '@/assets/san-bruno.png';
+import PosterJornadas from '@/assets/poster-jornadas-2024.png';
 
 const Courses = () => {
   const trainingProposal = [
@@ -135,6 +136,26 @@ const Courses = () => {
                   alt="San Bruno" 
                   className="w-full max-w-4xl mx-auto h-auto rounded-2xl shadow-lg mb-12"
                 />
+
+                {/* Video: I Jornadas de Ciencias y Humanidades */}
+                <div className="w-full max-w-4xl mx-auto mb-16">
+                  <h3 className="text-2xl font-serif font-bold text-stone-800 mb-6">
+                    I Jornadas de Ciencias y Humanidades frente al cambio global
+                  </h3>
+                  <div className="relative pt-[56.25%] bg-black rounded-2xl overflow-hidden shadow-xl">
+                    <video 
+                      className="absolute top-0 left-0 w-full h-full"
+                      controls
+                      poster={PosterJornadas} // Usamos la imagen Instantánea como poster
+                    >
+                      <source src="/videos/jornadas-ciencias-humanidades-2024.mp4" type="video/mp4" />
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                  <p className="mt-4 text-stone-600 italic">
+                    Celebradas el 19 de Abril de 2024
+                  </p>
+                </div>
               </div>
 
               {/* Nueva sección: Propuesta Formativa */}
