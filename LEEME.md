@@ -30,7 +30,13 @@ El hosting actual (Hostinger) está configurado para servir archivos estáticos 
     git push
     ```
 
-*Si olvidas hacer el build o subir la carpeta `dist`, la web online NO cambiará aunque el código en GitHub esté actualizado.*
+---
+
+## 🔄 Automatización del Despliegue (CI/CD)
+
+**IMPORTANTE:** El repositorio está configurado para que, una vez se hace el `git push` a la rama `master`, **Hostinger se actualice automáticamente**. 
+
+Esto se gestiona mediante un Webhook (o GitHub Action) que sincroniza el contenido de la rama con el servidor de producción de forma inmediata. No es necesario realizar acciones adicionales en el panel de Hostinger tras el push, más allá de verificar los cambios online y limpiar la caché si fuera necesario.
 
 ---
 
