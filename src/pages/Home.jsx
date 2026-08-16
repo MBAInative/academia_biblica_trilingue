@@ -16,6 +16,7 @@ import IsabelImg from '../assets/Isabel.png';
 import JoseAntonioImg from '../assets/jose-antonio.jpg';
 import AnaImg from '../assets/ana.jpg';
 import AraceliImg from '../assets/araceli.jpg';
+import CarmenImg from '../assets/carmen.jpg';
 import LogoABT from '../assets/logo-abt.jpg';
 
 import ConfImg1 from '@/assets/conferencias/Imagen.1.jpeg';
@@ -441,6 +442,31 @@ const Home = () => {
                               transition={{ duration: 0.8 }}
                               className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
                             >
+                              {/* Carmen */}
+                              <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col md:col-span-2">
+                                <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
+                                  <div className="w-24 h-24 flex-shrink-0">
+                                    <img 
+                                      src={CarmenImg} 
+                                      alt="Carmen" 
+                                      className="w-full h-full object-cover rounded-full border-2 border-amber-900 shadow-md"
+                                    />
+                                  </div>
+                                  <div className="font-serif font-bold text-amber-900 text-xl">
+                                    Carmen
+                                  </div>
+                                </div>
+                                <div className="flex-1">
+                                  <Quote className="text-amber-900/20 mb-2" size={32} />
+                                  <div className="text-stone-700 italic text-lg leading-relaxed">
+                                    <p className="mb-4">"Empecé a estudiar hebreo tras escuchar a Inmaculada unas charlas sobre la Biblia en las que la explicaba desde el lenguaje original. En ese momento quise conocerlo. Esto no es fácil pero si apasionante, en unas clases cercanas y muy participativas.</p>
+                                    <p className="mb-4">Con los compañeros formamos un grupo de diferentes procedencias y lugares pero con el mismo interés: conocer la Palabra de Dios como Él la dijo.</p>
+                                    <p className="mb-4">Inmaculada, es una profesora clara, excelente comunicadora y muy buena conocedora de la Biblia. Además es comprensiva con nuestras realidades: estamos trabajando o al cargo de mayores o con otras ocupaciones.</p>
+                                    <p>Estudiar hebreo y posteriormente griego, es un descubrimiento en mi vida y la apertura al conocimiento de Dios Padre e Hijo y el momento histórico en que se produjo la Revelación"</p>
+                                  </div>
+                                </div>
+                              </div>
+
                               {/* Juan Antonio */}
                               <div className="bg-white rounded-2xl p-8 shadow-sm border border-stone-200 h-full flex flex-col">
                                 <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
