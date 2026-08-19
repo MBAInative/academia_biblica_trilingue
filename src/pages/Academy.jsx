@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail, Book } from 'lucide-react';
+import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail, Book, ChevronDown, Download, CheckCircle, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LogoABT from '../assets/logo-abt.jpg';
 import RolloImage from '../assets/Rollo.jpg';
@@ -9,6 +9,11 @@ import CartelCursos from '../assets/cartel-cursos-26.jpg';
 import CartelHorarios from '../assets/cartel-horarios-26.jpg';
 
 const Academy = () => {
+  const [openAccordion, setOpenAccordion] = useState(null);
+  const toggleAccordion = (id) => {
+    setOpenAccordion(openAccordion === id ? null : id);
+  };
+
   const features = [
     {
       icon: BookOpen,
@@ -106,6 +111,26 @@ const Academy = () => {
                   <img class="w-full h-[400px] object-cover rounded-2xl shadow-lg" alt="Ancient Hebrew and Greek biblical manuscripts" src={RolloImage} />
                 </motion.div>
               </div>
+
+              {/* Vídeo Promocional */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-20 max-w-4xl mx-auto"
+              >
+                <div className="bg-stone-900 rounded-2xl overflow-hidden shadow-2xl relative aspect-video border-4 border-stone-800">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster={LogoABT}
+                  >
+                    <source src="/videos/promo_cursos.mp4" type="video/mp4" />
+                    Tu navegador no soporta el formato de vídeo.
+                  </video>
+                </div>
+              </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                 {features.map((feature, index) => (
@@ -294,6 +319,137 @@ const Academy = () => {
                   <Clock className="mx-auto text-amber-900 mb-4" size={40} />
                   <h3 className="text-lg font-semibold text-stone-800 mb-2">Niveles</h3>
                   <p className="text-stone-600 text-sm">Inicial, intermedio y avanzado</p>
+                </div>
+              </motion.div>
+
+              {/* Programa Académico y PDFs */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-20 max-w-4xl mx-auto"
+              >
+                <h2 className="text-3xl font-serif font-bold text-stone-800 mb-8 text-center">
+                  Programa Académico
+                </h2>
+                
+                <div className="space-y-4">
+                  {/* Acordeón Hebreo */}
+                  <div className="border-2 border-amber-200 rounded-2xl overflow-hidden bg-white">
+                    <button 
+                      onClick={() => toggleAccordion('hebreo')}
+                      className="w-full px-6 py-4 flex justify-between items-center bg-amber-50 hover:bg-amber-100 transition-colors"
+                    >
+                      <span className="text-xl font-bold text-amber-900">Programa de Hebreo Bíblico</span>
+                      <ChevronDown className={`text-amber-900 transition-transform ${openAccordion === 'hebreo' ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openAccordion === 'hebreo' && (
+                      <div className="p-6 text-stone-600 space-y-4">
+                        <p><strong>Nivel inicial:</strong> Introducción al hebreo, lectura, consonantes, vocales, sustantivos, adjetivos y nociones elementales del verbo. Traducción de sintagmas sencillos.</p>
+                        <p><strong>Nivel intermedio:</strong> Repaso, sufijación pronominal, partículas, numerales, introducción al sistema verbal (Qal, waw versivo). Traducción de frases y textos bíblicos sencillos.</p>
+                        <p><strong>Niveles avanzados:</strong> Verbo fuerte completo, oración nominal, verbos débiles, y traducción de pasajes y libros bíblicos (narrativa y poesía hebrea).</p>
+                        <div className="pt-4 flex justify-center">
+                          <a href="/pdf/curso_hebreo.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition-colors font-semibold shadow-md">
+                            <Download size={20} />
+                            <span>Descargar Dosier Completo (PDF)</span>
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Acordeón Griego */}
+                  <div className="border-2 border-rose-200 rounded-2xl overflow-hidden bg-white">
+                    <button 
+                      onClick={() => toggleAccordion('griego')}
+                      className="w-full px-6 py-4 flex justify-between items-center bg-rose-50 hover:bg-rose-100 transition-colors"
+                    >
+                      <span className="text-xl font-bold text-rose-900">Programa de Griego Bíblico</span>
+                      <ChevronDown className={`text-rose-900 transition-transform ${openAccordion === 'griego' ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openAccordion === 'griego' && (
+                      <div className="p-6 text-stone-600 space-y-4">
+                        <p><strong>Nivel inicial:</strong> Alfabeto, fonética, sistema casual (1ª, 2ª y 3ª declinación), artículo, adjetivos, pronombres y generalidades del verbo. Traducción de frases sencillas.</p>
+                        <p><strong>Nivel intermedio I y II:</strong> Grados del adjetivo, infinitivo, participio, subjuntivo e imperativo, voz medio-pasiva, verbos contractos y atemáticos. Análisis morfosintáctico de textos del NT.</p>
+                        <p><strong>Niveles avanzados:</strong> Análisis, traducción y exégesis de textos griegos del Nuevo Testamento y de la Septuaginta (LXX).</p>
+                        <div className="pt-4 flex justify-center">
+                          <a href="/pdf/curso_griego.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-rose-600 text-white px-6 py-3 rounded-full hover:bg-rose-700 transition-colors font-semibold shadow-md">
+                            <Download size={20} />
+                            <span>Descargar Dosier Completo (PDF)</span>
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Tarifas y Matrícula */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-20 max-w-5xl mx-auto"
+              >
+                <h2 className="text-3xl font-serif font-bold text-stone-800 mb-8 text-center">
+                  Tarifas y Matrícula
+                </h2>
+                <div className="text-center mb-8">
+                  <span className="inline-block bg-stone-200 text-stone-800 px-6 py-2 rounded-full text-lg font-semibold">
+                    Matrícula inicial: 50 €
+                  </span>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  {/* Tarjeta Semestral */}
+                  <div className="bg-white rounded-2xl p-8 border-2 border-stone-200 shadow-md hover:shadow-lg transition-shadow">
+                    <h3 className="text-2xl font-bold text-stone-800 mb-2">Pago Semestral</h3>
+                    <p className="text-stone-500 mb-6">Abonado en dos cuotas</p>
+                    <div className="text-4xl font-bold text-amber-900 mb-6">
+                      375 € <span className="text-lg font-normal text-stone-500">/ cuota</span>
+                    </div>
+                    <ul className="space-y-3 mb-8 text-stone-600">
+                      <li className="flex items-start space-x-2"><CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={18} /><span>Primera cuota en octubre</span></li>
+                      <li className="flex items-start space-x-2"><CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={18} /><span>Segunda cuota en febrero</span></li>
+                    </ul>
+                  </div>
+
+                  {/* Tarjeta Anual */}
+                  <div className="bg-gradient-to-br from-amber-50 to-rose-50 rounded-2xl p-8 border-2 border-rose-300 shadow-lg transform md:-translate-y-4">
+                    <div className="bg-rose-500 text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-full inline-block mb-4">
+                      Recomendado
+                    </div>
+                    <h3 className="text-2xl font-bold text-stone-800 mb-2">Pago Anual</h3>
+                    <p className="text-stone-500 mb-6">Un único pago en octubre</p>
+                    <div className="text-4xl font-bold text-rose-700 mb-6">
+                      660 € <span className="text-lg font-normal text-stone-500">/ año</span>
+                    </div>
+                    <ul className="space-y-3 mb-8 text-stone-600">
+                      <li className="flex items-start space-x-2"><CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={18} /><span>Mayor comodidad</span></li>
+                      <li className="flex items-start space-x-2"><CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={18} /><span>Te olvidas de los pagos el resto del año</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Descuentos y Formas de pago */}
+                <div className="bg-stone-50 rounded-2xl p-6 border border-stone-200">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="font-bold text-stone-800 mb-3 flex items-center"><Award className="mr-2 text-amber-600" size={20} /> Descuentos Especiales</h4>
+                      <ul className="space-y-2 text-sm text-stone-600">
+                        <li>• <strong>Antiguos alumnos / Jóvenes / Jubilados:</strong> Pago único de 594€ (10% desc.)</li>
+                        <li>• <strong>Desempleados / IMV:</strong> Pago único de 528€ (20% desc.)</li>
+                      </ul>
+                      <p className="text-xs text-stone-400 mt-2">* Descuentos no acumulables.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-stone-800 mb-3 flex items-center"><BookOpen className="mr-2 text-rose-600" size={20} /> Formas de Pago</h4>
+                      <p className="text-sm text-stone-600 mb-2">Se aceptan pagos mediante transferencia bancaria (ING), Bizum o PayPal.</p>
+                      <p className="text-sm text-stone-600">Contacta con nosotros para recibir los datos de pago al realizar tu matrícula.</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
 
