@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail } from 'lucide-react';
+import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail, Book } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LogoABT from '../assets/logo-abt.jpg';
 import RolloImage from '../assets/Rollo.jpg';
@@ -10,23 +10,23 @@ const Academy = () => {
   const features = [
     {
       icon: BookOpen,
-      title: 'Metodología Rigurosa',
-      description: 'Programas estructurados con enfoque académico y práctico para el aprendizaje de lenguas antiguas'
-    },
-    {
-      icon: Users,
-      title: 'Niveles Adaptados',
-      description: 'Cursos desde nivel inicial hasta avanzado, adaptados a las necesidades de cada estudiante'
+      title: 'Enfoque práctico y ameno',
+      description: 'Nuestros cursos combinan una sólida base teórica con un enfoque práctico que te permitirá aplicar lo aprendido desde el primer día.'
     },
     {
       icon: Award,
-      title: 'Certificación ECTS',
-      description: '6 ECTS del CTSA (Universidad Pontificia de Salamanca) con certificado acreditativo'
+      title: 'Profesora Experta',
+      description: 'Inmaculada Rodríguez Torné. Dra. en Filología Bíblica Trilingüe, teóloga y profesora con años de experiencia.'
     },
     {
       icon: Globe,
-      title: 'Modalidad Online',
-      description: 'Acceso flexible a las clases desde cualquier lugar del mundo'
+      title: 'Comunidad Internacional',
+      description: 'Únete a estudiantes de distintas partes del mundo con una misma pasión, para compartir conocimientos, resolver dudas y crecer juntos.'
+    },
+    {
+      icon: Book,
+      title: 'Materiales Personalizados',
+      description: 'Te proporcionaremos recursos didácticos de alta calidad, diseñados específicamente para tu crecimiento académico y espiritual.'
     }
   ];
 
@@ -82,16 +82,16 @@ const Academy = () => {
                   className="space-y-6"
                 >
                   <h2 className="text-3xl font-serif font-bold text-stone-800">
-                    Aprende las lenguas originales de la Biblia
+                    ¡Disfruta leyendo y comprendiendo la Biblia en sus lenguas originales!
                   </h2>
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    La <strong>Academia Bíblica Trilingüe</strong> ofrece una formación integral en hebreo y griego bíblico, con programas diseñados para estudiantes de todos los niveles.
+                    ¿Te imaginas poder leer y profundizar los textos sagrados como lo hicieron Jesús y los primeros cristianos? En la <strong>Academia Bíblica Trilingüe</strong> te invitamos a embarcarte en un viaje fascinante para aprender griego y hebreo bíblicos, y así profundizar en la Palabra de Dios de una manera que nunca creíste posible.
                   </p>
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Impartidos por la <strong>Pfra. Inmaculada Rodríguez Torné</strong>, Teóloga y Dra. en Filología Bíblica Trilingüe, los cursos combinan rigor académico con una metodología práctica y accesible.
+                    A menudo, las traducciones, por muy buenas que sean, pierden matices, juegos de palabras y la riqueza cultural que solo se puede encontrar en sus originales.
                   </p>
                   <p className="text-lg text-stone-600 leading-relaxed">
-                    Los cursos están dirigidos a personas con o sin conocimientos previos, interesadas en profundizar en el hebreo y griego de la Biblia.
+                    Conocer el griego y el hebreo te abrirá las puertas a una comprensión más profunda y personal de las Escrituras, revelando un mundo de significado que se oculta detrás de cada versículo. Y eso te acercará más a la Palabra y a Dios.
                   </p>
                 </motion.div>
 
@@ -293,6 +293,27 @@ const Academy = () => {
                   <h3 className="text-lg font-semibold text-stone-800 mb-2">Niveles</h3>
                   <p className="text-stone-600 text-sm">Inicial, intermedio y avanzado</p>
                 </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-16 text-center max-w-4xl mx-auto"
+              >
+                <h2 className="text-3xl font-serif font-bold text-amber-900 mb-6">
+                  Haz realidad tu sueño
+                </h2>
+                <p className="text-lg text-stone-600 leading-relaxed mb-6">
+                  Ya sea que seas un estudiante de teología, un pastor, una persona con ganas de aprender, o un creyente con un deseo profundo de conocer la Biblia en su forma más profunda, nuestros cursos son para ti.
+                </p>
+                <p className="text-xl font-medium text-stone-800 mb-2">
+                  ¡Inscríbete hoy y descubre la belleza, la profundidad y el poder de las Escrituras en sus idiomas originales!
+                </p>
+                <p className="text-lg font-bold text-rose-700 italic">
+                  Comenzamos en octubre. Ya falta poco para iniciar este increíble viaje 🤗 ¡Shalom! שלום ¡Jaire! χαῖρε 🌿
+                </p>
               </motion.div>
 
               <motion.div
