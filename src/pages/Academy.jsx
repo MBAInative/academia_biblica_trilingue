@@ -5,6 +5,8 @@ import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail, Book } from 'luci
 import { Link } from 'react-router-dom';
 import LogoABT from '../assets/logo-abt.jpg';
 import RolloImage from '../assets/Rollo.jpg';
+import CartelCursos from '../assets/cartel-cursos-26.jpg';
+import CartelHorarios from '../assets/cartel-horarios-26.jpg';
 
 const Academy = () => {
   const features = [
@@ -31,16 +33,16 @@ const Academy = () => {
   ];
 
   const hebrewCourses = [
-    { level: 'HEBREO I', day: 'Jueves', time: '18h-19.30h' },
-    { level: 'HEBREO II', day: 'Miércoles', time: '18.30h-20h' },
-    { level: 'HEBREO III', day: 'Miércoles', time: '17h-18.30h' },
-    { level: 'HEBREO RABINOS', day: 'Martes', time: '18h-19.30h' }
+    { level: 'HEBREO I', day: 'Martes', time: '16.30h-18h' },
+    { level: 'HEBREO II', day: 'Jueves', time: '18h-19.30h' },
+    { level: 'HEBREO III', day: 'Martes', time: '18h-19.30h' },
+    { level: 'HEBREO RABINOS', day: 'Miércoles', time: '17.30h-19h' }
   ];
 
   const greekCourses = [
-    { level: 'GRIEGO I', day: 'Jueves', time: '16.30h-18h' },
-    { level: 'GRIEGO II', day: 'Martes', time: '19.30h-21h' },
-    { level: 'GRIEGO III', day: 'Martes', time: '16.30h-18h' }
+    { level: 'GRIEGO I', day: 'Martes', time: '19.30h-21h' },
+    { level: 'GRIEGO II', day: 'Jueves', time: '16.30h-18h' },
+    { level: 'GRIEGO AVANZADO', day: 'Miércoles', time: '19h-20.30h' }
   ];
 
   return (
@@ -160,7 +162,7 @@ const Academy = () => {
               className="max-w-4xl mx-auto text-center"
             >
               <div className="inline-block bg-rose-200 text-rose-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
-                2025-2026
+                2026-2027
               </div>
               <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Cursos de Hebreo y Griego Bíblicos
@@ -182,7 +184,7 @@ const Academy = () => {
                 transition={{ duration: 0.8 }}
                 className="mb-16 max-w-2xl mx-auto"
               >
-                <img src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/43760bc2e3641e0c9001297e169904a8.jpg" alt="Información adicional sobre los cursos" className="w-full rounded-2xl shadow-lg" />
+                <img src={CartelCursos} alt="Información adicional sobre los cursos 2026-2027" className="w-full rounded-2xl shadow-lg" />
               </motion.div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -268,7 +270,7 @@ const Academy = () => {
                 transition={{ duration: 0.8 }}
                 className="mb-16 max-w-2xl mx-auto"
               >
-                <img src="https://horizons-cdn.hostinger.com/b142b1f4-d967-45d2-8f34-6dc408a42f87/92f33436df5d59f5a2c5659d7402a2cf.jpg" alt="Cursos de Hebreo y Griego Bíblicos 2025-2026" className="w-full rounded-2xl shadow-lg" />
+                <img src={CartelHorarios} alt="Cursos de Hebreo y Griego Bíblicos 2026-2027" className="w-full rounded-2xl shadow-lg" />
               </motion.div>
 
               <motion.div
