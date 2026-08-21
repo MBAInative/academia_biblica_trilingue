@@ -453,6 +453,31 @@ const Academy = () => {
                 </div>
               </motion.div>
 
+              {/* Acceso al Campus */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mb-20 text-center max-w-4xl mx-auto bg-amber-50 rounded-2xl p-8 border-2 border-amber-200 shadow-md"
+              >
+                <h3 className="text-2xl font-serif font-bold text-stone-800 mb-4">
+                  ¿Ya eres alumno matriculado?
+                </h3>
+                <p className="text-stone-600 mb-6">
+                  Accede a nuestro Campus Virtual interactivo para practicar lectura, realizar ejercicios y enviar tus grabaciones a la profesora.
+                </p>
+                <a 
+                  href="https://campus.academiabiblicatrilingue.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-amber-700 text-white px-8 py-4 rounded-full hover:bg-amber-800 transition-all font-bold shadow-lg text-lg transform hover:scale-105"
+                >
+                  <BookOpen size={24} />
+                  <span>Entrar al Campus</span>
+                </a>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

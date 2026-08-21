@@ -24,7 +24,7 @@ const Header = () => {
     { path: '/podcast', label: 'Podcast' },
     { path: '/biblia-arte', label: 'Biblia y Arte' },
     { path: '/entrevistas', label: 'Entrevistas' },
-    { path: 'https://campus.academiabiblicatrilingue.com', label: 'Campus Virtual', isExternal: true },
+    { path: 'https://campus.academiabiblicatrilingue.com', label: 'Campus', isExternal: true },
     { path: '/contacto', label: 'Contacto' }
   ];
 
