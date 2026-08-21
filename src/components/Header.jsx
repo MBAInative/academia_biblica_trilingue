@@ -24,6 +24,7 @@ const Header = () => {
     { path: '/podcast', label: 'Podcast' },
     { path: '/biblia-arte', label: 'Biblia y Arte' },
     { path: '/entrevistas', label: 'Entrevistas' },
+    { path: 'https://campus.academiabiblicatrilingue.com', label: 'Campus Virtual', isExternal: true },
     { path: '/contacto', label: 'Contacto' }
   ];
 
@@ -45,19 +46,37 @@ const Header = () => {
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  location.pathname === link.path
-                    ? 'text-amber-900 bg-amber-50'
-                    : 'text-stone-700 hover:text-amber-900 hover:bg-stone-100'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const className = `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                location.pathname === link.path
+                  ? 'text-amber-900 bg-amber-50'
+                  : 'text-stone-700 hover:text-amber-900 hover:bg-stone-100'
+              }`;
+
+              if (link.isExternal) {
+                return (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${className} border border-amber-200 !bg-amber-100 !text-amber-900 hover:!bg-amber-200 ml-2`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={className}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           <button
@@ -78,20 +97,39 @@ const Header = () => {
             className="lg:hidden bg-stone-50 border-t border-stone-200"
           >
             <div className="container mx-auto px-4 py-4 space-y-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    location.pathname === link.path
-                      ? 'text-amber-900 bg-amber-50'
-                      : 'text-stone-700 hover:text-amber-900 hover:bg-stone-100'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const className = `block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  location.pathname === link.path
+                    ? 'text-amber-900 bg-amber-50'
+                    : 'text-stone-700 hover:text-amber-900 hover:bg-stone-100'
+                }`;
+
+                if (link.isExternal) {
+                  return (
+                    <a
+                      key={link.path}
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${className} border border-amber-200 !bg-amber-100 !text-amber-900 font-bold mt-2`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={className}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         )}
