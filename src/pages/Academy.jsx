@@ -118,15 +118,16 @@ const Academy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="mb-20 max-w-4xl mx-auto"
+                className="mb-20 max-w-sm mx-auto"
               >
-                <div className="bg-stone-900 rounded-2xl overflow-hidden shadow-2xl relative aspect-video border-4 border-stone-800">
+                <div className="bg-stone-900 rounded-2xl overflow-hidden shadow-2xl relative aspect-[478/850] border-4 border-stone-800">
                   <video 
                     controls 
-                    className="w-full h-full object-cover"
+                    preload="none"
+                    className="w-full h-full object-contain"
                     poster={LogoABT}
                   >
-                    <source src="/videos/promo_cursos.mp4" type="video/mp4" />
+                    <source src="/videos/hebreo-biblico-2026-2027.mp4" type="video/mp4" />
                     Tu navegador no soporta el formato de vídeo.
                   </video>
                 </div>
