@@ -1,15 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Radio, Globe } from 'lucide-react';
 import LogoABT from '../assets/logo-abt.jpg';
-import InmaImage from '../assets/Inma.04.png';
-import Inma02 from '../assets/Inma.02.png';
+import InmaImage from '../assets/Inma.04.jpg';
+import Inma02 from '../assets/Inma.02.jpg';
 import Inma03 from '../assets/Inma.03.jpg';
-import Inma05 from '../assets/Inma.05.png';
-import MuroImage from '../assets/Muro.png';
-import LosaImage from '../assets/Losa.png';
+import Inma05 from '../assets/Inma.05.jpg';
+import MuroImage from '../assets/Muro.jpg';
+import LosaImage from '../assets/Losa.jpg';
 import RolloImage from '../assets/Rollo.jpg';
 
 const About = () => {
@@ -33,10 +33,10 @@ const About = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Acerca de mí - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Conoce a Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe, Teóloga, profesora universitaria y experta en lenguas bíblicas." />
-      </Helmet>
+      <PageMeta
+        title="Acerca de mí - Inmaculada Rodríguez Torné"
+        description="Conoce a Inmaculada Rodríguez Torné, Dra. en Filología Bíblica Trilingüe, Teóloga, profesora universitaria y experta en lenguas bíblicas."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-gradient-to-br from-amber-50 via-rose-50 to-stone-100">

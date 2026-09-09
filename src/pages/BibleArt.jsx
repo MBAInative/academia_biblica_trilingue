@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, X } from 'lucide-react';
@@ -17,10 +17,10 @@ const BibleArt = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Biblia y Arte - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Explora la intersección entre la Biblia y el arte a través del análisis de obras maestras inspiradas en textos sagrados." />
-      </Helmet>
+      <PageMeta
+        title="Biblia y Arte - Inmaculada Rodríguez Torné"
+        description="Explora la intersección entre la Biblia y el arte a través del análisis de obras maestras inspiradas en textos sagrados."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-gradient-to-br from-amber-50 via-rose-50 to-stone-100">

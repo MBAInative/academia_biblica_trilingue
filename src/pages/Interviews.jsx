@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlayCircle, Music, X } from 'lucide-react';
 import FronteraIcon from '../assets/frontera-icono.jpg';
 import HorizonteIcon from '../assets/horizonte-icono.jpg';
-import InmaImg from '../assets/Inma.05.png';
+import InmaImg from '../assets/Inma.05.jpg';
 import LogoABT from '../assets/logo-abt.jpg';
 import rtveLogo from '../assets/RTVE.png';
-import RTVE01 from '../assets/RTVE/01.png';
-import RTVE02 from '../assets/RTVE/02.png';
-import RTVE03 from '../assets/RTVE/03.png';
-import RTVE04 from '../assets/RTVE/04.png';
-import RTVE05 from '../assets/RTVE/05.png';
-import RTVE06 from '../assets/RTVE/06.png';
-import RTVE07 from '../assets/RTVE/07.png';
-import RTVE08 from '../assets/RTVE/08.png';
-import RTVE09 from '../assets/RTVE/09.png';
-import RTVE10 from '../assets/RTVE/10.png';
-import RTVE11 from '../assets/RTVE/11.png';
-import RTVE12 from '../assets/RTVE/12.png';
+import RTVE01 from '../assets/RTVE/01.jpg';
+import RTVE02 from '../assets/RTVE/02.jpg';
+import RTVE03 from '../assets/RTVE/03.jpg';
+import RTVE04 from '../assets/RTVE/04.jpg';
+import RTVE05 from '../assets/RTVE/05.jpg';
+import RTVE06 from '../assets/RTVE/06.jpg';
+import RTVE07 from '../assets/RTVE/07.jpg';
+import RTVE08 from '../assets/RTVE/08.jpg';
+import RTVE09 from '../assets/RTVE/09.jpg';
+import RTVE10 from '../assets/RTVE/10.jpg';
+import RTVE11 from '../assets/RTVE/11.jpg';
+import RTVE12 from '../assets/RTVE/12.jpg';
 import FronteraImg from '../assets/RTVE/Frontera.jpeg';
 
 const Interviews = () => {
@@ -32,10 +32,10 @@ const Interviews = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Entrevistas - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Entrevistas y apariciones en medios de comunicación de Inmaculada Rodríguez Torné." />
-      </Helmet>
+      <PageMeta
+        title="Entrevistas - Inmaculada Rodríguez Torné"
+        description="Entrevistas y apariciones en medios de comunicación de Inmaculada Rodríguez Torné."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-gradient-to-br from-amber-50 via-rose-50 to-stone-100">
@@ -90,7 +90,7 @@ const Interviews = () => {
                 </div>
 
                 <div className="mt-12 border-t border-stone-100 pt-12">
-                  <video controls className="w-full rounded-xl shadow-xl bg-black aspect-video mb-6">
+                  <video controls preload="none" className="w-full rounded-xl shadow-xl bg-black aspect-video mb-6">
                     <source src="/videos/entrevista-rtve.mp4" type="video/mp4" />
                     Tu navegador no soporta la reproducción de video.
                   </video>

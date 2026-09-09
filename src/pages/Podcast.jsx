@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion } from 'framer-motion';
 import { PlayCircle, ExternalLink } from 'lucide-react';
 import LogoABT from '../assets/logo-abt.jpg';
-import CustodiosImg from '../assets/custodios-creacion.png';
+import CustodiosImg from '../assets/custodios-creacion.jpg';
 import PinceladasImg from '../assets/pinceladas-biblicas.jpg';
 
 const Podcast = () => {
@@ -93,10 +93,10 @@ Una invitación a redescubrir nuestra vocación más profunda: ser imagen del Cr
 
   return (
     <>
-      <Helmet>
-        <title>Podcast - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Escucha contenido especializado sobre Biblia, lenguas bíblicas y cultura del mundo antiguo." />
-      </Helmet>
+      <PageMeta
+        title="Podcast - Inmaculada Rodríguez Torné"
+        description="Escucha contenido especializado sobre Biblia, lenguas bíblicas y cultura del mundo antiguo."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-gradient-to-br from-amber-50 via-rose-50 to-stone-100">

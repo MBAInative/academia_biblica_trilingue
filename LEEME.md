@@ -48,6 +48,7 @@ Esto se gestiona mediante un Webhook (o GitHub Action) que sincroniza el conteni
 *   **Iconos:** Lucide React
 *   **Formularios:** Formspree
 *   **Enrutamiento:** React Router DOM
+*   **Títulos y meta de cada página:** `src/components/PageMeta.jsx` (componente propio; se retiró `react-helmet`, que con React 18 no aplicaba nada)
 
 ---
 
@@ -63,7 +64,10 @@ Esto se gestiona mediante un Webhook (o GitHub Action) que sincroniza el conteni
 ### 2. Estructura Visual Común
 Se ha establecido un patrón de diseño para mantener la coherencia:
 *   **Cabecera de Secciones:** Cada página principal (Home, About, Courses, etc.) incluye el logo `logo-abt.jpg` centrado en la parte superior del contenido principal, justo antes del título H1.
-*   **Favicon:** Se utiliza `public/favicon.jpg` (que corresponde al Logo ABT).
+*   **Favicon:** Se utiliza `public/favicon.png` (que corresponde al Logo ABT).
+
+### 3. Peso de las imágenes
+Antes de añadir una imagen a `src/assets/`, redúcela: lado mayor de 1800 px como máximo (400 px si es una foto de testimonio, que se muestra a 96 px) y guárdala en **JPG**, no en PNG. El PNG solo para logos o iconos que necesiten fondo transparente. Una foto de 4 MB en PNG pesa unos 80 KB en JPG y se ve igual.
 
 ---
 
@@ -86,12 +90,19 @@ Se ha establecido un patrón de diseño para mantener la coherencia:
 
 ---
 
-## 📝 Estado Actual (Enero 2026)
+## 📝 Estado Actual (Septiembre 2026)
 
-1.  **Home:** Muestra la cabecera, la sección de cursos 2025-2026 detallada y la propuesta formativa completa.
-2.  **Cursos:** Simplificada para mostrar directamente la "Propuesta Formativa" sin duplicar la intro de la Home.
-3.  **Entrevistas:** Actualizada con nuevos iconos (Frontera/Horizonte) y limpieza de contenido antiguo.
-4.  **Header:** Limpio, solo muestra el texto "IRT" y el menú de navegación.
+1.  **Home:** Cabecera, cuatro accesos a las secciones, un **aviso corto** de los cursos 2026-2027 con botón a "Hebreo y Griego", y los testimonios. Ya **no** duplica los horarios ni la Propuesta Formativa.
+2.  **Hebreo y Griego (`/academia`):** Única página con el detalle de los cursos: carteles, horarios de los siete niveles, programa, tarifas y acceso al Campus.
+3.  **Cursos y Conferencias (`/cursos`):** Única página con la "Propuesta Formativa".
+4.  **Entrevistas:** Actualizada con nuevos iconos (Frontera/Horizonte) y limpieza de contenido antiguo.
+5.  **Header:** Limpio, solo muestra el texto "IRT" y el menú de navegación, con el enlace externo al Campus.
+
+**Regla de oro del contenido:** cada dato vive en una sola página. Si un horario o una tarifa cambia, se toca en un único sitio.
+
+## 🔗 El Campus Virtual
+
+El menú incluye **Campus**, que apunta a `https://campus.academiabiblicatrilingue.com`. Es una aplicación aparte, con su propio repositorio (`campus-academia-biblica-trilingue`), guardada en la carpeta `academia_biblica_trilingue/` de este directorio. **No forma parte de la compilación de esta web** (no entra en `dist` ni en este repositorio), pero **sí forma parte del sitio para el visitante**: si se toca el menú o la página "Hebreo y Griego", hay que comprobar que el enlace al Campus sigue vivo.
 
 ## Comandos Útiles
 

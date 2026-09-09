@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Award, Globe, Calendar, Clock, Mail, Book, ChevronDown, Download, CheckCircle, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -52,10 +52,10 @@ const Academy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Academia de Lenguas Bíblicas - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Academia especializada en la enseñanza de hebreo y griego bíblico con certificación universitaria. Aprende las lenguas originales de la Biblia." />
-      </Helmet>
+      <PageMeta
+        title="Academia de Lenguas Bíblicas - Inmaculada Rodríguez Torné"
+        description="Academia especializada en la enseñanza de hebreo y griego bíblico con certificación universitaria. Aprende las lenguas originales de la Biblia."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-gradient-to-br from-amber-50 via-rose-50 to-stone-100">
@@ -108,7 +108,7 @@ const Academy = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  <img class="w-full h-[400px] object-cover rounded-2xl shadow-lg" alt="Ancient Hebrew and Greek biblical manuscripts" src={RolloImage} />
+                  <img className="w-full h-[400px] object-cover rounded-2xl shadow-lg" alt="Ancient Hebrew and Greek biblical manuscripts" src={RolloImage} />
                 </motion.div>
               </div>
 
@@ -165,12 +165,9 @@ const Academy = () => {
                 <h2 className="text-3xl font-serif font-bold text-stone-800 mb-4">
                   Certificación Universitaria
                 </h2>
-                <p className="text-lg text-stone-600 mb-6 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
                   Los cursos de la Academia otorgan <strong>6 ECTS del CTSA</strong> (Centro Teológico San Agustín - Universidad Pontificia de Salamanca), con certificado acreditativo oficial.
                 </p>
-                <div className="flex justify-center">
-                  <img class="h-20 object-contain" alt="Universidad Pontificia de Salamanca logo" src="https://images.unsplash.com/photo-1589330694653-ded6df03f754" />
-                </div>
               </motion.div>
             </div>
           </div>
@@ -189,9 +186,9 @@ const Academy = () => {
               <div className="inline-block bg-rose-200 text-rose-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
                 2026-2027
               </div>
-              <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-stone-800 mb-6">
                 Cursos de Hebreo y Griego Bíblicos
-              </h1>
+              </h2>
               <p className="text-xl text-stone-600 font-light">
                 Programas estructurados para todos los niveles con horarios flexibles
               </p>

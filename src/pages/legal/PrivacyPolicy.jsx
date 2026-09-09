@@ -1,14 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion } from 'framer-motion';
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
-        <title>Política de Privacidad - Academia Bíblica Trilingüe</title>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <PageMeta
+        title="Política de Privacidad - Academia Bíblica Trilingüe"
+        robots="noindex"
+      />
 
       <div className="pt-20">
         <section className="py-12 bg-stone-50">

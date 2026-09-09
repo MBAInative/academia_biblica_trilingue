@@ -6,3 +6,6 @@ node_modules
 # Ignorar audios pesados de origen
 /fotos_y_dibujos/audios
 # (Permitimos public/audio para los archivos optimizados que vayamos añadiendo)
+
+# El Campus es un proyecto aparte con su propio repositorio
+/academia_biblica_trilingue

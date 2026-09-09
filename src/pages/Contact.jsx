@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -37,10 +37,10 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contacto - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Ponte en contacto con Inmaculada Rodríguez Torné para consultas sobre cursos de lenguas bíblicas, conferencias o colaboraciones." />
-      </Helmet>
+      <PageMeta
+        title="Contacto - Inmaculada Rodríguez Torné"
+        description="Ponte en contacto con Inmaculada Rodríguez Torné para consultas sobre cursos de lenguas bíblicas, conferencias o colaboraciones."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-gradient-to-br from-amber-50 via-rose-50 to-stone-100">

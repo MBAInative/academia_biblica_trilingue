@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Globe, Mail, Phone, Book, Heart, Utensils, Church, Languages, Sparkles } from 'lucide-react';
 
@@ -10,7 +10,7 @@ import ConfImg4 from '@/assets/conferencias/Imagen.4.jpeg';
 import ConfImg5 from '@/assets/conferencias/Imagen.5.jpeg';
 import ConfImg6 from '@/assets/conferencias/Imagen.6.jpeg';
 import LogoABT from '@/assets/logo-abt.jpg';
-import SanBrunoImg from '@/assets/san-bruno.png';
+import SanBrunoImg from '@/assets/san-bruno.jpg';
 
 const Courses = () => {
   const trainingProposal = [
@@ -116,10 +116,10 @@ const Courses = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Cursos y Conferencias - Inmaculada Rodríguez Torné</title>
-        <meta name="description" content="Cursos de hebreo y griego bíblico 2025-2026. Niveles inicial, intermedio y avanzado. Modalidad online con certificación universitaria." />
-      </Helmet>
+      <PageMeta
+        title="Cursos y Conferencias - Inmaculada Rodríguez Torné"
+        description="Cursos de hebreo y griego bíblico 2026-2027. Niveles inicial, intermedio y avanzado. Modalidad online con certificación universitaria."
+      />
 
       <div className="pt-20">
         <section className="py-20 bg-white">

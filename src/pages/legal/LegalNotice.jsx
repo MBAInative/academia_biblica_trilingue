@@ -1,14 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageMeta from '@/components/PageMeta';
 import { motion } from 'framer-motion';
 
 const LegalNotice = () => {
   return (
     <>
-      <Helmet>
-        <title>Aviso Legal - Academia Bíblica Trilingüe</title>
-        <meta name="robots" content="noindex" />
-      </Helmet>
+      <PageMeta
+        title="Aviso Legal - Academia Bíblica Trilingüe"
+        robots="noindex"
+      />
 
       <div className="pt-20">
         <section className="py-12 bg-stone-50">
